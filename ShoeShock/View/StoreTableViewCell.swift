@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StoreCellDelegate {
+    func didIsAddedBtnPressed(button: UIButton)
+}
+
 class StoreTableViewCell: UITableViewCell {
     
     //MARK: Outlets
@@ -15,7 +19,7 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var shoePriceLbl: UILabel!
     @IBOutlet weak var isAddedToCartBtn: UIButton!
     
-    
+    var delegate: StoreCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,4 +38,21 @@ class StoreTableViewCell: UITableViewCell {
             isAddedToCartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }
     }
+    
+    @IBAction func addToCartBtnTapped(_ sender: Any) {
+        //if unliked / false
+        if isAddedToCartBtn.currentImage == UIImage(systemName: "heart"){
+            //Change image to heart-fill
+            isAddedToCartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            //Update button'ss selected status to true
+            isAddedToCartBtn.isSelected = true
+            //Inform the delegate which cell's button is selected so it can inform StoreVC
+            delegate?.didIsAddedBtnPressed(button: isAddedToCartBtn)
+        } else { // if liked / true
+            // Update the the button's image to an unfilled heart
+            isAddedToCartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+    }
+    
+    
 }

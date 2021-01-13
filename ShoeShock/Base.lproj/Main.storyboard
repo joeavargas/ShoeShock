@@ -56,6 +56,9 @@
                                                         <constraint firstAttribute="height" constant="50" id="sSC-TP-sRA"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="addToCartBtnTapped:" destination="SPa-dR-SQB" eventType="touchUpInside" id="w5y-bq-Grx"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$75.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oU5-RL-sbA">
                                                     <rect key="frame" x="98" y="38.333333333333336" width="54" height="23.333333333333336"/>

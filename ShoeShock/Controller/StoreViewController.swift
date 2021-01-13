@@ -7,8 +7,8 @@
 
 import UIKit
 
-class StoreViewController: UIViewController {
-    
+class StoreViewController: UIViewController, StoreCellDelegate {
+
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
@@ -44,6 +44,16 @@ class StoreViewController: UIViewController {
             shoeInfoVC.shoe = shoe
          }
      }
+    
+    // MARK: - StoreCell Delegate
+    func didIsAddedBtnPressed(button: UIButton) {
+        if button.isSelected{
+            //CartService instance - add item to cart
+        } else {
+            //CartService instance - remove item from cart
+        }
+        
+    }
 }
 
 extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
