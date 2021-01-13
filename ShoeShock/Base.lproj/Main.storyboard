@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Store View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StoreViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShoeShock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpo-Lz-D5y">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Rd3-RI-3dN"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u70-VY-Uvv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u70-VY-Uvv">
                                 <rect key="frame" x="0.0" y="112" width="414" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -49,12 +49,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-se-iBI">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-se-iBI">
                                                     <rect key="frame" x="344" y="25" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="hZA-Vj-hxV"/>
                                                         <constraint firstAttribute="height" constant="50" id="sSC-TP-sRA"/>
                                                     </constraints>
+                                                    <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$75.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oU5-RL-sbA">
                                                     <rect key="frame" x="98" y="38.333333333333336" width="54" height="23.333333333333336"/>
@@ -92,12 +93,15 @@
                             <constraint firstItem="u70-VY-Uvv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ngk-7D-wB6"/>
                             <constraint firstItem="u70-VY-Uvv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pq4-as-mx2"/>
                             <constraint firstItem="u70-VY-Uvv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="b6g-NO-mcd"/>
-                            <constraint firstItem="Qpo-Lz-D5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gsf-MO-abM"/>
-                            <constraint firstItem="Qpo-Lz-D5y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sHf-r3-Tm8"/>
                             <constraint firstItem="Qpo-Lz-D5y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tFD-8d-RUU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qpo-Lz-D5y" secondAttribute="trailing" constant="20" id="vvy-VK-JBI"/>
+                            <constraint firstItem="Qpo-Lz-D5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zK8-M4-18u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="olg-qT-Poo"/>
+                    <connections>
+                        <outlet property="tableView" destination="u70-VY-Uvv" id="flc-SU-fTn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

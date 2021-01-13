@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768525AF284600B1FFFA /* AppDelegate.swift */; };
 		E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768725AF284600B1FFFA /* SceneDelegate.swift */; };
-		E384768A25AF284600B1FFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768925AF284600B1FFFA /* ViewController.swift */; };
 		E384768D25AF284600B1FFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384768B25AF284600B1FFFA /* Main.storyboard */; };
 		E384768F25AF284600B1FFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E384768E25AF284600B1FFFA /* Assets.xcassets */; };
 		E384769225AF284600B1FFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384769025AF284600B1FFFA /* LaunchScreen.storyboard */; };
 		E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4673F25AF2CAF001F1649 /* Shoe.swift */; };
 		E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */; };
 		E3D4674B25AF3282001F1649 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674A25AF3282001F1649 /* Functions.swift */; };
+		E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675025AF3D29001F1649 /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E384768225AF284600B1FFFA /* ShoeShock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeShock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E384768525AF284600B1FFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E384768725AF284600B1FFFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E384768925AF284600B1FFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E384768C25AF284600B1FFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E384768E25AF284600B1FFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E384769125AF284600B1FFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		E3D4673F25AF2CAF001F1649 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
 		E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		E3D4674A25AF3282001F1649 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		E3D4675025AF3D29001F1649 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +64,9 @@
 			children = (
 				E3D4674225AF2CB4001F1649 /* Model */,
 				E3D4674825AF30EC001F1649 /* View */,
+				E3D4675325AF3D2E001F1649 /* Controller */,
 				E384768525AF284600B1FFFA /* AppDelegate.swift */,
 				E384768725AF284600B1FFFA /* SceneDelegate.swift */,
-				E384768925AF284600B1FFFA /* ViewController.swift */,
 				E384768B25AF284600B1FFFA /* Main.storyboard */,
 				E384768E25AF284600B1FFFA /* Assets.xcassets */,
 				E384769025AF284600B1FFFA /* LaunchScreen.storyboard */,
@@ -98,6 +98,14 @@
 				E3D4674A25AF3282001F1649 /* Functions.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		E3D4675325AF3D2E001F1649 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4675025AF3D29001F1649 /* StoreViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */,
-				E384768A25AF284600B1FFFA /* ViewController.swift in Sources */,
 				E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */,
+				E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */,
 				E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */,
 				E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */,
 				E3D4674B25AF3282001F1649 /* Functions.swift in Sources */,
