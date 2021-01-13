@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNW-Xf-oIo">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Store View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StoreViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShoeShock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpo-Lz-D5y">
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Rd3-RI-3dN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u70-VY-Uvv">
+                                <rect key="frame" x="0.0" y="112" width="414" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="100" id="SPa-dR-SQB" customClass="StoreTableViewCell" customModule="ShoeShock" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SPa-dR-SQB" id="cn6-OE-I60">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J35-e6-fwo">
+                                                    <rect key="frame" x="20" y="15" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Fq6-51-Gej"/>
+                                                        <constraint firstAttribute="height" constant="70" id="bv8-Cq-DRx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi-Vis Pro Leather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Re-EZ-cOm">
+                                                    <rect key="frame" x="98" y="14.999999999999998" width="137" height="23.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-se-iBI">
+                                                    <rect key="frame" x="344" y="25" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="hZA-Vj-hxV"/>
+                                                        <constraint firstAttribute="height" constant="50" id="sSC-TP-sRA"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$75.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oU5-RL-sbA">
+                                                    <rect key="frame" x="98" y="38.333333333333336" width="54" height="23.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e6r-se-iBI" firstAttribute="trailing" secondItem="cn6-OE-I60" secondAttribute="trailingMargin" id="0og-Vr-NcK"/>
+                                                <constraint firstItem="oU5-RL-sbA" firstAttribute="leading" secondItem="J35-e6-fwo" secondAttribute="trailing" constant="8" symbolic="YES" id="FJ6-If-CoK"/>
+                                                <constraint firstItem="J35-e6-fwo" firstAttribute="top" secondItem="cn6-OE-I60" secondAttribute="topMargin" constant="4" id="GZY-90-WWb"/>
+                                                <constraint firstItem="J35-e6-fwo" firstAttribute="leading" secondItem="cn6-OE-I60" secondAttribute="leadingMargin" id="Kab-Gj-wuD"/>
+                                                <constraint firstItem="9Re-EZ-cOm" firstAttribute="leading" secondItem="J35-e6-fwo" secondAttribute="trailing" constant="8" symbolic="YES" id="Zdo-I5-jiI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="J35-e6-fwo" secondAttribute="bottom" constant="4" id="bDQ-4X-MRm"/>
+                                                <constraint firstItem="9Re-EZ-cOm" firstAttribute="top" secondItem="cn6-OE-I60" secondAttribute="topMargin" constant="4" id="dXR-zj-rsS"/>
+                                                <constraint firstItem="oU5-RL-sbA" firstAttribute="top" secondItem="9Re-EZ-cOm" secondAttribute="bottom" id="gSe-we-MWu"/>
+                                                <constraint firstItem="e6r-se-iBI" firstAttribute="centerY" secondItem="J35-e6-fwo" secondAttribute="centerY" id="k8N-2J-kLS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="isAddedToCartBtn" destination="e6r-se-iBI" id="vHu-vI-Mav"/>
+                                            <outlet property="shoeImageView" destination="J35-e6-fwo" id="bd9-Rm-3Ad"/>
+                                            <outlet property="shoeNameLbl" destination="oU5-RL-sbA" id="aIM-rt-fi3"/>
+                                            <outlet property="shoePriceLbl" destination="oU5-RL-sbA" id="3RL-Md-v9X"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u70-VY-Uvv" firstAttribute="top" secondItem="Qpo-Lz-D5y" secondAttribute="bottom" constant="8" symbolic="YES" id="Hcf-4r-BnC"/>
+                            <constraint firstItem="u70-VY-Uvv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ngk-7D-wB6"/>
+                            <constraint firstItem="u70-VY-Uvv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pq4-as-mx2"/>
+                            <constraint firstItem="u70-VY-Uvv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="b6g-NO-mcd"/>
+                            <constraint firstItem="Qpo-Lz-D5y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tFD-8d-RUU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qpo-Lz-D5y" secondAttribute="trailing" constant="20" id="vvy-VK-JBI"/>
+                            <constraint firstItem="Qpo-Lz-D5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zK8-M4-18u"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="olg-qT-Poo"/>
+                    <connections>
+                        <outlet property="tableView" destination="u70-VY-Uvv" id="flc-SU-fTn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="138.58695652173915"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="De6-TC-uiA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nNW-Xf-oIo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gqG-Wy-WNj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fgt-kg-Qxv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xou-BP-VQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.58695652173915"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
