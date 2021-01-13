@@ -25,7 +25,7 @@
                                 <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u70-VY-Uvv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u70-VY-Uvv">
                                 <rect key="frame" x="0.0" y="112" width="414" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -77,10 +77,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="isAddedToCartBtn" destination="e6r-se-iBI" id="vHu-vI-Mav"/>
+                                            <outlet property="isAddedToCartBtn" destination="e6r-se-iBI" id="9Pw-Vm-koY"/>
                                             <outlet property="shoeImageView" destination="J35-e6-fwo" id="bd9-Rm-3Ad"/>
                                             <outlet property="shoeNameLbl" destination="oU5-RL-sbA" id="aIM-rt-fi3"/>
                                             <outlet property="shoePriceLbl" destination="oU5-RL-sbA" id="3RL-Md-v9X"/>
+                                            <segue destination="2KD-Ua-mzq" kind="presentation" identifier="toShoeInfoVC" id="Ugm-n6-dYM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -107,6 +108,103 @@
             </objects>
             <point key="canvasLocation" x="1044.9275362318842" y="138.58695652173915"/>
         </scene>
+        <!--Shoe Info View Controller-->
+        <scene sceneID="gpV-z7-v87">
+            <objects>
+                <viewController id="fAM-Ba-fHa" customClass="ShoeInfoViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="onj-8y-QAp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi-Vis Pro Leather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oos-w1-iz9">
+                                <rect key="frame" x="126" y="66" width="162" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPE-eO-E54">
+                                <rect key="frame" x="107" y="102" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8J6-BM-tvQ"/>
+                                    <constraint firstAttribute="height" constant="200" id="rGa-lD-j46"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$75.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4c-PF-muL">
+                                <rect key="frame" x="174.66666666666666" y="312" width="65" height="27.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ay9-lH-Ta3">
+                                <rect key="frame" x="57" y="344.33333333333331" width="300" height="239.99999999999994"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="HNh-lV-EMj"/>
+                                    <constraint firstAttribute="width" constant="300" id="uI2-DC-7Sy"/>
+                                </constraints>
+                                <string key="text">Made famous by Julius “Dr. J” Erving, the Pro Leather was part of many game-changing moments. The first to blend high-flying style and performance. The first to take off from the free-throw line. Today, the silhouette has been upgraded for improved fit and function, as well as distinct off-court style. The Pro leather \"Hi-Vis\" features a neon color-pop Star Chevron and outsole, as well as glow-in-the-dark details.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-uY-PaK">
+                                <rect key="frame" x="147" y="589.33333333333337" width="120" height="35"/>
+                                <color key="backgroundColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="d9y-f6-Bz2"/>
+                                    <constraint firstAttribute="width" constant="120" id="oXh-hy-HfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Add to Cart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-IY-Lcd">
+                                <rect key="frame" x="147" y="634.33333333333337" width="120" height="35"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="lvo-dm-UpJ"/>
+                                    <constraint firstAttribute="width" constant="120" id="tcp-cg-vYh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissBtnTapped:" destination="fAM-Ba-fHa" eventType="touchUpInside" id="Cif-GV-RR1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K7x-qr-ftw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZPE-eO-E54" firstAttribute="centerX" secondItem="onj-8y-QAp" secondAttribute="centerX" id="58D-TM-3hp"/>
+                            <constraint firstItem="qRJ-uY-PaK" firstAttribute="centerX" secondItem="onj-8y-QAp" secondAttribute="centerX" id="PxX-9S-CJ8"/>
+                            <constraint firstItem="ay9-lH-Ta3" firstAttribute="top" secondItem="j4c-PF-muL" secondAttribute="bottom" constant="5" id="Vh6-w1-vYc"/>
+                            <constraint firstItem="j4c-PF-muL" firstAttribute="top" secondItem="ZPE-eO-E54" secondAttribute="bottom" constant="10" id="X3B-wc-ReQ"/>
+                            <constraint firstItem="j4c-PF-muL" firstAttribute="centerX" secondItem="onj-8y-QAp" secondAttribute="centerX" id="dWD-7z-FHJ"/>
+                            <constraint firstItem="Oos-w1-iz9" firstAttribute="centerX" secondItem="onj-8y-QAp" secondAttribute="centerX" id="dva-Sn-u6C"/>
+                            <constraint firstItem="qRJ-uY-PaK" firstAttribute="top" secondItem="ay9-lH-Ta3" secondAttribute="bottom" constant="5" id="goC-Q1-RgH"/>
+                            <constraint firstItem="ay9-lH-Ta3" firstAttribute="centerX" secondItem="onj-8y-QAp" secondAttribute="centerX" id="ngS-D5-b6d"/>
+                            <constraint firstItem="ZPE-eO-E54" firstAttribute="top" secondItem="Oos-w1-iz9" secondAttribute="bottom" constant="8" symbolic="YES" id="obr-UU-clf"/>
+                            <constraint firstItem="wtF-IY-Lcd" firstAttribute="centerX" secondItem="onj-8y-QAp" secondAttribute="centerX" id="pkq-QC-hy6"/>
+                            <constraint firstItem="Oos-w1-iz9" firstAttribute="top" secondItem="K7x-qr-ftw" secondAttribute="top" constant="10" id="xme-iu-i24"/>
+                            <constraint firstItem="wtF-IY-Lcd" firstAttribute="top" secondItem="qRJ-uY-PaK" secondAttribute="bottom" constant="10" id="zVn-cR-CII"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jal-SX-VF5"/>
+                    <connections>
+                        <outlet property="addToCartBtn" destination="qRJ-uY-PaK" id="Ecu-cY-O0n"/>
+                        <outlet property="shoeImageView" destination="ZPE-eO-E54" id="WaX-wX-Hou"/>
+                        <outlet property="shoeInfoTextView" destination="ay9-lH-Ta3" id="eCn-US-lkg"/>
+                        <outlet property="shoeNameLbl" destination="Oos-w1-iz9" id="ELN-LF-l11"/>
+                        <outlet property="shoePriceLbl" destination="j4c-PF-muL" id="eIX-M4-BQN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egL-ds-2M7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886.9565217391305" y="-607.33695652173913"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="De6-TC-uiA">
             <objects>
@@ -125,8 +223,29 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.58695652173915"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4AF-Hw-p5Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2KD-Ua-mzq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KNB-ig-0RG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fAM-Ba-fHa" kind="relationship" relationship="rootViewController" id="Nrr-jC-nCF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLC-NG-ndC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="-607"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

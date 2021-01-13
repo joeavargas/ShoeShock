@@ -33,12 +33,17 @@ class StoreViewController: UIViewController {
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-
+    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "toShoeInfoVC" {
+             let indexPath = tableView.indexPathForSelectedRow!
+             let shoe = shoes[indexPath.row]
+             let navController = segue.destination as! UINavigationController
+             let shoeInfoVC = navController.topViewController as! ShoeInfoViewController
+             
+            shoeInfoVC.shoe = shoe
+         }
+     }
 }
 
 extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
