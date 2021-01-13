@@ -16,6 +16,7 @@
 		E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */; };
 		E3D4674B25AF3282001F1649 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674A25AF3282001F1649 /* Functions.swift */; };
 		E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675025AF3D29001F1649 /* StoreViewController.swift */; };
+		E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
 		E3D4674A25AF3282001F1649 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		E3D4675025AF3D29001F1649 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D4675025AF3D29001F1649 /* StoreViewController.swift */,
+				E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */,
 				E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */,
 				E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */,
+				E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */,
 				E3D4674B25AF3282001F1649 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
