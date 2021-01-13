@@ -17,6 +17,8 @@
 		E3D4674B25AF3282001F1649 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674A25AF3282001F1649 /* Functions.swift */; };
 		E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675025AF3D29001F1649 /* StoreViewController.swift */; };
 		E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */; };
+		E3D4675A25AF6622001F1649 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675925AF6622001F1649 /* CartViewController.swift */; };
+		E3D4675D25AF66A8001F1649 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675C25AF66A8001F1649 /* CartTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E3D4674A25AF3282001F1649 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		E3D4675025AF3D29001F1649 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeInfoViewController.swift; sourceTree = "<group>"; };
+		E3D4675925AF6622001F1649 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E3D4675C25AF66A8001F1649 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */,
+				E3D4675C25AF66A8001F1649 /* CartTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				E3D4675025AF3D29001F1649 /* StoreViewController.swift */,
 				E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */,
+				E3D4675925AF6622001F1649 /* CartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,7 +190,9 @@
 				E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */,
 				E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */,
 				E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */,
+				E3D4675D25AF66A8001F1649 /* CartTableViewCell.swift in Sources */,
 				E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */,
+				E3D4675A25AF6622001F1649 /* CartViewController.swift in Sources */,
 				E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */,
 				E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */,
 				E3D4674B25AF3282001F1649 /* Functions.swift in Sources */,

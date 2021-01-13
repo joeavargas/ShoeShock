@@ -99,7 +99,14 @@
                             <constraint firstItem="Qpo-Lz-D5y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zK8-M4-18u"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="olg-qT-Poo"/>
+                    <navigationItem key="navigationItem" id="olg-qT-Poo">
+                        <barButtonItem key="rightBarButtonItem" image="cart" catalog="system" id="ZxS-er-AYl">
+                            <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="RL6-Vn-1lV" kind="show" id="HNl-fE-6CT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="u70-VY-Uvv" id="flc-SU-fTn"/>
                     </connections>
@@ -241,16 +248,16 @@
             </objects>
             <point key="canvasLocation" x="1836" y="-607"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="cEe-U0-Fq1">
             <objects>
-                <viewController id="RL6-Vn-1lV" sceneMemberID="viewController">
+                <viewController id="RL6-Vn-1lV" customClass="CartViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y7g-fY-vbi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyCart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taB-GM-2qi">
-                                <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                <rect key="frame" x="20" y="44" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="zVC-AZ-jzp"/>
                                 </constraints>
@@ -259,10 +266,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tPY-sH-78K">
-                                <rect key="frame" x="0.0" y="68" width="414" height="668"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="100" id="FhU-7Y-Nh2" customClass="StoreTableViewCell" customModule="ShoeShock" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="100" id="FhU-7Y-Nh2" customClass="CartTableViewCell" customModule="ShoeShock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FhU-7Y-Nh2" id="Lir-01-3aA">
@@ -316,9 +323,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="shoeImageView" destination="lH4-5d-X2v" id="iba-PU-ZHR"/>
-                                            <outlet property="shoeNameLbl" destination="Uqw-NY-AE4" id="UNm-1J-bx2"/>
-                                            <outlet property="shoePriceLbl" destination="Uqw-NY-AE4" id="91t-uW-Kts"/>
+                                            <outlet property="shoeImageView" destination="lH4-5d-X2v" id="JBE-cx-5Rq"/>
+                                            <outlet property="shoeNameLbl" destination="ZPl-ns-dmp" id="3Vn-M4-CYZ"/>
+                                            <outlet property="shoePriceLbl" destination="Uqw-NY-AE4" id="F8h-Cr-bU3"/>
+                                            <outlet property="shoeQuantityLbl" destination="Vq3-EJ-Qba" id="VDc-zJ-8Fc"/>
+                                            <outlet property="stepper" destination="nHl-D2-gX6" id="WG7-mY-1ce"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -337,9 +346,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WFK-I8-eeL"/>
-                    <connections>
-                        <outlet property="tableView" destination="tPY-sH-78K" id="hWR-lG-WN4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBa-Eq-opY" sceneMemberID="firstResponder"/>
             </objects>
@@ -347,6 +353,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
