@@ -47,9 +47,14 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //Dequeue cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell
+        //Fetch object to display
         let selectedShoe = CartService.shared.products[indexPath.row]
+        
+        //Update cell / pass data over
         cell?.updateCell(sp: selectedShoe)
+        cell?.selectedProduct = selectedShoe
         return cell!
     }
     

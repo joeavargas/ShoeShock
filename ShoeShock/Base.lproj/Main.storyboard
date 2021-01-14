@@ -329,11 +329,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="quantityStepper" destination="nHl-D2-gX6" id="WG7-mY-1ce"/>
                                             <outlet property="shoeImageView" destination="lH4-5d-X2v" id="JBE-cx-5Rq"/>
                                             <outlet property="shoeNameLbl" destination="ZPl-ns-dmp" id="3Vn-M4-CYZ"/>
                                             <outlet property="shoePriceLbl" destination="Uqw-NY-AE4" id="F8h-Cr-bU3"/>
                                             <outlet property="shoeQuantityLbl" destination="Vq3-EJ-Qba" id="VDc-zJ-8Fc"/>
-                                            <outlet property="stepper" destination="nHl-D2-gX6" id="WG7-mY-1ce"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

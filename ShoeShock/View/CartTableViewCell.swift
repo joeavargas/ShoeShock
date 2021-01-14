@@ -14,7 +14,7 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var shoeNameLbl: UILabel!
     @IBOutlet weak var shoePriceLbl: UILabel!
     @IBOutlet weak var shoeQuantityLbl: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var quantityStepper: UIStepper!
     
     
     //Properties
@@ -30,9 +30,16 @@ class CartTableViewCell: UITableViewCell {
         shoeNameLbl.text = sp.shoe.name
         let totalShoeAmountPrice = sp.shoe.price * Double(sp.quantity)
         shoePriceLbl.text = String(format: "$%.2f", totalShoeAmountPrice)
+        
+        //Configure UIStepper
+        quantityStepper.addTarget(self, action: #selector(onStepperChanged(stepper:)), for: .valueChanged)
+        quantityStepper.value = Double(sp.quantity)
+        shoeQuantityLbl.text = "\(sp.quantity)"
     }
     
-    func onStepperChanged(stepper: UIStepper){
+    @objc func onStepperChanged(stepper: UIStepper){
+//        CartService.shared.increaseQuantity(cartedShoe: selectedProduct, quantityValue: stepper.value)
+        shoeQuantityLbl.text = "\(Int(stepper.value))"
         self.selectedProduct.quantity = Int(stepper.value)
         self.selectedProduct.calculateTotal()
     }
