@@ -28,8 +28,8 @@ class CartTableViewCell: UITableViewCell {
     func updateCell(sp: SelectedProduct){
         shoeImageView.image = imageFrom(imageName: sp.shoe.image)
         shoeNameLbl.text = sp.shoe.name
-        let totalShoeAmountPrice = sp.shoe.price * Double(sp.quantity)
-        shoePriceLbl.text = String(format: "$%.2f", totalShoeAmountPrice)
+//        let totalShoeAmountPrice = sp.shoe.price * Double(sp.quantity)
+        shoePriceLbl.text = String(format: "$%.2f", sp.totalCost)
         
         //Configure UIStepper
         quantityStepper.addTarget(self, action: #selector(onStepperChanged(stepper:)), for: .valueChanged)
@@ -38,10 +38,11 @@ class CartTableViewCell: UITableViewCell {
     }
     
     @objc func onStepperChanged(stepper: UIStepper){
-//        CartService.shared.increaseQuantity(cartedShoe: selectedProduct, quantityValue: stepper.value)
         shoeQuantityLbl.text = "\(Int(stepper.value))"
         self.selectedProduct.quantity = Int(stepper.value)
+        shoePriceLbl.text = String(format: "$%.2f", selectedProduct.totalCost)
         self.selectedProduct.calculateTotal()
+        print("Stepper value is \(stepper.value) and shoe quantity is \(selectedProduct.quantity)")
     }
 
 }
