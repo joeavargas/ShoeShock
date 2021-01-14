@@ -18,12 +18,23 @@ class CartTableViewCell: UITableViewCell {
     
     
     //Properties
+    var selectedProduct: SelectedProduct!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func updateCell(sp: SelectedProduct){
+        shoeImageView.image = imageFrom(imageName: sp.shoe.image)
+        shoeNameLbl.text = sp.shoe.name
+        let totalShoeAmountPrice = sp.shoe.price * Double(sp.quantity)
+        shoePriceLbl.text = String(format: "$%.2f", totalShoeAmountPrice)
+    }
     
+    func onStepperChanged(stepper: UIStepper){
+        self.selectedProduct.quantity = Int(stepper.value)
+        self.selectedProduct.calculateTotal()
+    }
 
 }

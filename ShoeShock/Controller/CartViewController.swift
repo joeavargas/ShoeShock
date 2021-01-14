@@ -17,9 +17,11 @@ class CartViewController: UIViewController {
     
     
     //MARK: Properties
+    var selectedProduct = [SelectedProduct]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalLbl.text = String(format: "$%.2f", CartService.shared.getSubtotal())
 
         // Do any additional setup after loading the view.
     }
@@ -38,15 +40,14 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //CartService.shared.getShoes().count
-        return 1
+        
+        return CartService.shared.products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as? CartTableViewCell
-        
-        //CartService.shared.getShoes()[indexPath.row]
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell
+        let selectedShoe = CartService.shared.products[indexPath.row]
+        cell?.updateCell(sp: selectedShoe)
         return cell!
     }
     

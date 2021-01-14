@@ -8,11 +8,14 @@
 import UIKit
 
 class StoreViewController: UIViewController, StoreCellDelegate {
+    
 
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Properties
+    
+    
     var shoes: [Shoe] = [
         Shoe(image: "shoe1.png", name: "Hi-Vis Pro Leather", price: 75.00, description: "Made famous by Julius “Dr. J” Erving, the Pro Leather was part of many game-changing moments. The first to blend high-flying style and performance. The first to take off from the free-throw line. Today, the silhouette has been upgraded for improved fit and function, as well as distinct off-court style. The Pro leather \"Hi-Vis\" features a neon color-pop Star Chevron and outsole, as well as glow-in-the-dark details.", addedToCart: false),
         Shoe(image: "shoe2.png", name: "Black Ice Pro Leather L2", price: 85.00, description: "In the '70s, the Pro Leather made a name for itself as one of the most iconic basketball shoes of all time, thanks to its game-making performance features and statement-making style. Today, we're updating the court legend for the streets with a stacked leather build, an exaggerated midsole, and a doubled-up tongue for added style.", addedToCart: false),
@@ -32,8 +35,6 @@ class StoreViewController: UIViewController, StoreCellDelegate {
 
 
     // MARK: - Navigation
-
-    
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "toShoeInfoVC" {
              let indexPath = tableView.indexPathForSelectedRow!
@@ -46,9 +47,9 @@ class StoreViewController: UIViewController, StoreCellDelegate {
      }
     
     // MARK: - StoreCell Delegate
-    func didIsAddedBtnPressed(button: UIButton) {
+    func didIsAddedBtnPressed(button: UIButton, shoe: Shoe) {
         if button.isSelected{
-            //CartService instance - add item to cart
+            CartService.shared.addShoe(shoe: shoe)
         } else {
             //CartService instance - remove item from cart
         }
@@ -73,7 +74,9 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
         let shoe = shoes[indexPath.row]
         
         //Configure cell
+        cell?.delegate = self
         cell?.updateCell(shoe: shoe)
+        cell?.shoe = shoe
         
         return cell!
     }

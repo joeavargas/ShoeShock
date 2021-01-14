@@ -8,7 +8,7 @@
 import UIKit
 
 protocol StoreCellDelegate {
-    func didIsAddedBtnPressed(button: UIButton)
+    func didIsAddedBtnPressed(button: UIButton, shoe: Shoe)
 }
 
 class StoreTableViewCell: UITableViewCell {
@@ -20,14 +20,16 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var isAddedToCartBtn: UIButton!
     
     var delegate: StoreCellDelegate?
+    var shoe: Shoe!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
         // Initialization code
     }
 
     //MARK: Cell Init
-    func updateCell(shoe: Shoe){
+    func updateCell(shoe:Shoe){
         shoeImageView.image = imageFrom(imageName: shoe.image)
         shoeNameLbl.text = shoe.name
         shoePriceLbl.text = String(format: "$%.2f", shoe.price)
@@ -44,15 +46,18 @@ class StoreTableViewCell: UITableViewCell {
         if isAddedToCartBtn.currentImage == UIImage(systemName: "heart"){
             //Change image to heart-fill
             isAddedToCartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            //Update button'ss selected status to true
+            
+            //Update button's selected status to true
             isAddedToCartBtn.isSelected = true
-            //Inform the delegate which cell's button is selected so it can inform StoreVC
-            delegate?.didIsAddedBtnPressed(button: isAddedToCartBtn)
+            
+            //StoreCellDelegate will inform StoreVC which cell's button is selected so it can
+            delegate?.didIsAddedBtnPressed(button: isAddedToCartBtn, shoe: shoe)
+            
         } else { // if liked / true
+            
             // Update the the button's image to an unfilled heart
             isAddedToCartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
-    
-    
+
 }

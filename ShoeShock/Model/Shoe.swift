@@ -23,3 +23,19 @@ struct Shoe {
         self.addedToCart = addedToCart
     }
 }
+
+class SelectedProduct {
+    var shoe: Shoe
+    var quantity = 0
+    var totalCost = 0.0
+    
+    init(shoe: Shoe, quantity: Int, totalCost: Double){
+        self.shoe = shoe
+        self.quantity = quantity
+        self.totalCost = totalCost
+    }
+    
+    func calculateTotal(){
+        totalCost = shoe.price * Double(quantity)
+    }
+}
