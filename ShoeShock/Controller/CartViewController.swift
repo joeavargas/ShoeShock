@@ -21,6 +21,8 @@ class CartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         totalLbl.text = String(format: "$%.2f", CartService.shared.getSubtotal())
 
         // Do any additional setup after loading the view.

@@ -12,6 +12,10 @@ class CartService {
     static let shared = CartService()
     var products = [SelectedProduct]()
     
+    func getCartedShoes() -> [SelectedProduct] {
+        return products
+    }
+    
     // Adds shoe to products:[SelectedProducts]
     func addShoe(shoe: Shoe) {
         let selectedProduct = SelectedProduct(shoe: shoe, quantity: 1, totalCost: shoe.price)
