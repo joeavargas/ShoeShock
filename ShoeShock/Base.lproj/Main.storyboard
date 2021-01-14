@@ -82,8 +82,8 @@
                                         <connections>
                                             <outlet property="isAddedToCartBtn" destination="e6r-se-iBI" id="9Pw-Vm-koY"/>
                                             <outlet property="shoeImageView" destination="J35-e6-fwo" id="bd9-Rm-3Ad"/>
-                                            <outlet property="shoeNameLbl" destination="oU5-RL-sbA" id="aIM-rt-fi3"/>
-                                            <outlet property="shoePriceLbl" destination="oU5-RL-sbA" id="3RL-Md-v9X"/>
+                                            <outlet property="shoeNameLbl" destination="9Re-EZ-cOm" id="wbb-qv-oPx"/>
+                                            <outlet property="shoePriceLbl" destination="oU5-RL-sbA" id="pB1-ce-ZTA"/>
                                             <segue destination="2KD-Ua-mzq" kind="presentation" identifier="toShoeInfoVC" id="Ugm-n6-dYM"/>
                                         </connections>
                                     </tableViewCell>
