@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StepperValueChanged {
+    func updateSubtotal(stepper: UIStepper)
+}
+
 class CartTableViewCell: UITableViewCell {
     
     //IBOutlets
@@ -19,6 +23,7 @@ class CartTableViewCell: UITableViewCell {
     
     //Properties
     var selectedProduct: SelectedProduct!
+    var delegate: StepperValueChanged!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +51,9 @@ class CartTableViewCell: UITableViewCell {
         
         //Display the returned total cost
         shoePriceLbl.text = String(format: "$%.2f", selectedProduct.totalCost)
+        
+        //Delegate when the stepper is tapped(changing the quantity of shoes and recalculating) and update the total cost in CartVC
+        delegate?.updateSubtotal(stepper: quantityStepper)
 
         print("Stepper value is \(quantityStepper.value) and shoe quantity is \(selectedProduct.quantity)")
     }

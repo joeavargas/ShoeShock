@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, StepperValueChanged {
+   
+    
     
     //MARK: Outlets
     
@@ -30,6 +32,10 @@ class CartViewController: UIViewController {
     
 
     @IBAction func purchaseBtnTapped(_ sender: Any) {
+    }
+    
+    func updateSubtotal(stepper: UIStepper) {
+        totalLbl.text = String(format: "$%.2f", CartService.shared.getSubtotal())
     }
     
 
@@ -55,6 +61,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         //Update cell / pass data over
         cell?.updateCell(sp: selectedShoe)
         cell?.selectedProduct = selectedShoe
+        cell?.delegate = self
         return cell!
     }
     
