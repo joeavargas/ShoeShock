@@ -312,6 +312,9 @@
                                                         </label>
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nHl-D2-gX6">
                                                             <rect key="frame" x="31" y="0.0" width="94" height="32"/>
+                                                            <connections>
+                                                                <action selector="onStepperTapped:" destination="FhU-7Y-Nh2" eventType="valueChanged" id="2CN-Ax-B1L"/>
+                                                            </connections>
                                                         </stepper>
                                                     </subviews>
                                                 </stackView>

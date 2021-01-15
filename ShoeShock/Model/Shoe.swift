@@ -26,7 +26,7 @@ struct Shoe {
 
 class SelectedProduct {
     var shoe: Shoe
-    var quantity = 1
+    var quantity = 0
     var totalCost = 0.0
     
     init(shoe: Shoe, quantity: Int, totalCost: Double){

@@ -28,21 +28,25 @@ class CartTableViewCell: UITableViewCell {
     func updateCell(sp: SelectedProduct){
         shoeImageView.image = imageFrom(imageName: sp.shoe.image)
         shoeNameLbl.text = sp.shoe.name
-//        let totalShoeAmountPrice = sp.shoe.price * Double(sp.quantity)
         shoePriceLbl.text = String(format: "$%.2f", sp.totalCost)
         
         //Configure UIStepper
-        quantityStepper.addTarget(self, action: #selector(onStepperChanged(stepper:)), for: .valueChanged)
         quantityStepper.value = Double(sp.quantity)
         shoeQuantityLbl.text = "\(sp.quantity)"
     }
-    
-    @objc func onStepperChanged(stepper: UIStepper){
-        shoeQuantityLbl.text = "\(Int(stepper.value))"
-        self.selectedProduct.quantity = Int(stepper.value)
-        shoePriceLbl.text = String(format: "$%.2f", selectedProduct.totalCost)
+    @IBAction func onStepperTapped(_ sender: Any) {
+        //Update the quantity label to the stepper value
+        self.shoeQuantityLbl.text = "\(Int(quantityStepper.value))"
+        
+        //Update the selected shoe quantity to the stepper value
+        self.selectedProduct.quantity = Int(quantityStepper.value)
+        
+        //Return the total cost of shoe quantity * shoe price
         self.selectedProduct.calculateTotal()
-        print("Stepper value is \(stepper.value) and shoe quantity is \(selectedProduct.quantity)")
-    }
+        
+        //Display the returned total cost
+        shoePriceLbl.text = String(format: "$%.2f", selectedProduct.totalCost)
 
+        print("Stepper value is \(quantityStepper.value) and shoe quantity is \(selectedProduct.quantity)")
+    }
 }
