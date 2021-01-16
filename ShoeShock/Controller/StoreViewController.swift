@@ -50,10 +50,7 @@ class StoreViewController: UIViewController, StoreCellDelegate {
     func didIsAddedBtnPressed(button: UIButton, shoe: Shoe) {
         if button.isSelected{
             CartService.shared.addShoe(shoe: shoe)
-        } else {
-            //CartService instance - remove item from cart
         }
-        
     }
 }
 

@@ -23,13 +23,20 @@ class CartService {
         print("\(shoe.name) added to cart. There are \(products.count) in the Selected Products")
     }
     
+    //Removes shoe from cart when quantity reaches 0
+    func removeShoeFromCart(cartedShoe: Shoe){
+        let removedShoe = SelectedProduct(shoe: cartedShoe, quantity: 0, totalCost: cartedShoe.price)
+        if let index = products.firstIndex(of: removedShoe){
+            products.remove(at: index)
+        }
+    }
+    
     // Cycles through products[SelectedProducts] and returns the total price of all products
     func getSubtotal() -> Double {
         var total = 0.0
         for x in 0..<products.count {
             total += products[x].totalCost
         }
-        print("Total cost of all \(products.count) pairs of shoes is \(total)")
         return total
     }
 }

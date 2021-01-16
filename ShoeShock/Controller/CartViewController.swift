@@ -7,10 +7,8 @@
 
 import UIKit
 
-class CartViewController: UIViewController, StepperValueChanged {
-   
-    
-    
+class CartViewController: UIViewController, StepperValueChanged, RemoveCellAndShoeFromCart {
+       
     //MARK: Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -38,7 +36,13 @@ class CartViewController: UIViewController, StepperValueChanged {
         totalLbl.text = String(format: "$%.2f", CartService.shared.getSubtotal())
     }
     
-
+    //MARK: Implement delegate function from CartTableViewCell.swift to:
+    // - remove shoe from products array of type SelectedProducts
+    // - refresh tableview
+    func removeShoeAt(stepper: UIStepper, shoe: Shoe) {
+            CartService.shared.removeShoeFromCart(cartedShoe: shoe)
+            tableView.reloadData()
+    }
 }
 
 extension CartViewController: UITableViewDelegate, UITableViewDataSource {
@@ -57,13 +61,12 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell
         //Fetch object to display
         let selectedShoe = CartService.shared.products[indexPath.row]
-        
+                
         //Update cell / pass data over
         cell?.updateCell(sp: selectedShoe)
         cell?.selectedProduct = selectedShoe
         cell?.delegate = self
+        cell?.removeCellAndShoeFromCartDelegate = self
         return cell!
     }
-    
-    
 }
