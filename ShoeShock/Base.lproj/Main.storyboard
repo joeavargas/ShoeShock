@@ -50,9 +50,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-se-iBI">
-                                                    <rect key="frame" x="344" y="37.666666666666664" width="50" height="25"/>
+                                                    <rect key="frame" x="319" y="37.666666666666664" width="75" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="hZA-Vj-hxV"/>
+                                                        <constraint firstAttribute="width" constant="75" id="hZA-Vj-hxV"/>
                                                         <constraint firstAttribute="height" constant="25" id="sSC-TP-sRA"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,7 +67,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28p-Ld-3V1">
-                                                    <rect key="frame" x="286" y="25" width="50" height="50"/>
+                                                    <rect key="frame" x="261" y="25" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Ani-BC-cJs"/>
                                                         <constraint firstAttribute="height" constant="50" id="Qut-xC-Ec6"/>
