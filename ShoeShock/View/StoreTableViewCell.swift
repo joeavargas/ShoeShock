@@ -18,6 +18,7 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var shoeNameLbl: UILabel!
     @IBOutlet weak var shoePriceLbl: UILabel!
     @IBOutlet weak var isAddedToCartBtn: UIButton!
+    @IBOutlet weak var isAddedToFavoritesBtn: UIButton!
     
     var delegate: StoreCellDelegate?
     var shoe: Shoe!

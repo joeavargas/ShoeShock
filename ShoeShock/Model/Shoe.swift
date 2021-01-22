@@ -14,13 +14,15 @@ struct Shoe {
     var price: Double
     var description: String
     var addedToCart: Bool
+    var addedToFavorites: Bool
     
-    init(image: String, name: String, price: Double, description: String, addedToCart: Bool){
+    init(image: String, name: String, price: Double, description: String, addedToCart: Bool, addedToFavorites: Bool){
         self.image = image
         self.name = name
         self.price = price
         self.description = description
         self.addedToCart = addedToCart
+        self.addedToFavorites = addedToFavorites
     }
 }
 

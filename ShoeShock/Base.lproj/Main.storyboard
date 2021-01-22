@@ -50,10 +50,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6r-se-iBI">
-                                                    <rect key="frame" x="344" y="25" width="50" height="50"/>
+                                                    <rect key="frame" x="344" y="37.666666666666664" width="50" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="hZA-Vj-hxV"/>
-                                                        <constraint firstAttribute="height" constant="50" id="sSC-TP-sRA"/>
+                                                        <constraint firstAttribute="height" constant="25" id="sSC-TP-sRA"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -66,9 +66,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28p-Ld-3V1">
+                                                    <rect key="frame" x="286" y="25" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Ani-BC-cJs"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Qut-xC-Ec6"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="addToCartBtnTapped:" destination="SPa-dR-SQB" eventType="touchUpInside" id="V6z-Mc-CUg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="e6r-se-iBI" firstAttribute="trailing" secondItem="cn6-OE-I60" secondAttribute="trailingMargin" id="0og-Vr-NcK"/>
+                                                <constraint firstItem="e6r-se-iBI" firstAttribute="leading" secondItem="28p-Ld-3V1" secondAttribute="trailing" constant="8" symbolic="YES" id="3BY-wG-w6m"/>
                                                 <constraint firstItem="oU5-RL-sbA" firstAttribute="leading" secondItem="J35-e6-fwo" secondAttribute="trailing" constant="8" symbolic="YES" id="FJ6-If-CoK"/>
                                                 <constraint firstItem="J35-e6-fwo" firstAttribute="top" secondItem="cn6-OE-I60" secondAttribute="topMargin" constant="4" id="GZY-90-WWb"/>
                                                 <constraint firstItem="J35-e6-fwo" firstAttribute="leading" secondItem="cn6-OE-I60" secondAttribute="leadingMargin" id="Kab-Gj-wuD"/>
@@ -77,10 +89,12 @@
                                                 <constraint firstItem="9Re-EZ-cOm" firstAttribute="top" secondItem="cn6-OE-I60" secondAttribute="topMargin" constant="4" id="dXR-zj-rsS"/>
                                                 <constraint firstItem="oU5-RL-sbA" firstAttribute="top" secondItem="9Re-EZ-cOm" secondAttribute="bottom" id="gSe-we-MWu"/>
                                                 <constraint firstItem="e6r-se-iBI" firstAttribute="centerY" secondItem="J35-e6-fwo" secondAttribute="centerY" id="k8N-2J-kLS"/>
+                                                <constraint firstItem="28p-Ld-3V1" firstAttribute="centerY" secondItem="oU5-RL-sbA" secondAttribute="centerY" id="xVf-ED-vUe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="isAddedToCartBtn" destination="e6r-se-iBI" id="9Pw-Vm-koY"/>
+                                            <outlet property="isAddedToFavoritesBtn" destination="28p-Ld-3V1" id="COd-xX-W42"/>
                                             <outlet property="shoeImageView" destination="J35-e6-fwo" id="bd9-Rm-3Ad"/>
                                             <outlet property="shoeNameLbl" destination="9Re-EZ-cOm" id="wbb-qv-oPx"/>
                                             <outlet property="shoePriceLbl" destination="oU5-RL-sbA" id="pB1-ce-ZTA"/>
