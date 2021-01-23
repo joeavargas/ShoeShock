@@ -35,18 +35,20 @@ class StoreTableViewCell: UITableViewCell {
         shoeNameLbl.text = shoe.name
         shoePriceLbl.text = String(format: "$%.2f", shoe.price)
         
-        if shoe.addedToCart == false {
-            //adjust corner radius
-            isAddedToCartBtn.layer.cornerRadius = 5
-            //btn bg color to pink
-            isAddedToCartBtn.layer.backgroundColor = #colorLiteral(red: 0.8498285413, green: 0.224113524, blue: 0.443239212, alpha: 1)
-            //btn text = Add to Cart
-            isAddedToCartBtn.setTitle("Add", for: .normal)
-            //btn font color = white
-            isAddedToCartBtn.setTitleColor(UIColor.white, for: .normal)
-            //btn font size = 12
-            isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
-        } else {
+        updateAddedToCartBtnStatus(shoe: shoe)
+    }
+    
+    @IBAction func addToCartBtnTapped(_ sender: Any) {
+        updateAddedToCartBtnPressedStatus()
+    }
+    
+    //MARK: - Functions
+    
+    func updateAddedToCartBtnStatus(shoe: Shoe){
+        
+        switch shoe.addedToCart {
+        case true:
+            //MARK: If the shoe is in the cart, configure the button like so:
             //adjust corner radius
             isAddedToCartBtn.layer.cornerRadius = 5
             //btn bg color to green
@@ -57,14 +59,60 @@ class StoreTableViewCell: UITableViewCell {
             isAddedToCartBtn.setTitleColor(UIColor.white, for: .normal)
             //btn font size = 12
             isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
+        case false:
+            //MARK: If the shoe is NOT in the cart, configure the button like so:
+            //adjust corner radius
+            isAddedToCartBtn.layer.cornerRadius = 5
+            //btn bg color to pink
+            isAddedToCartBtn.layer.backgroundColor = #colorLiteral(red: 0.8498285413, green: 0.224113524, blue: 0.443239212, alpha: 1)
+            //btn text = Add to Cart
+            isAddedToCartBtn.setTitle("Add", for: .normal)
+            //btn font color = white
+            isAddedToCartBtn.setTitleColor(UIColor.white, for: .normal)
+            //btn font size = 12
+            isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
         }
     }
     
-    @IBAction func addToCartBtnTapped(_ sender: Any) {
-        //if unliked / false
-        if isAddedToCartBtn.currentImage == UIImage(systemName: "heart"){
-            //Change image to heart-fill
-            isAddedToCartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+    func updateAddedToCartBtnPressedStatus(){
+        
+        switch shoe.addedToCart {
+        
+        //MARK: - When a shoe is in the cart, remove it from cart
+        case true:
+            shoe.addedToCart = false
+            //adjust corner radius
+            isAddedToCartBtn.layer.cornerRadius = 5
+            //btn bg color to pink
+            isAddedToCartBtn.layer.backgroundColor = #colorLiteral(red: 0.8498285413, green: 0.224113524, blue: 0.443239212, alpha: 1)
+            //btn text = Add to Cart
+            isAddedToCartBtn.setTitle("Add", for: .normal)
+            //btn font color = white
+            isAddedToCartBtn.setTitleColor(UIColor.white, for: .normal)
+            //btn font size = 12
+            isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
+            
+            //Remove shoe from the cart
+            CartService.shared.removeShoeFromCart(cartedShoe: shoe)
+            
+            //Update button's selected status to true
+            isAddedToCartBtn.isSelected = true
+            
+            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
+            
+        //MARK: - When a shoe is NOT in the cart, add it to the cart
+        case false:
+            shoe.addedToCart = true
+            //adjust corner radius
+            isAddedToCartBtn.layer.cornerRadius = 5
+            //btn bg color to green
+            isAddedToCartBtn.layer.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            //btn text = "Added"
+            isAddedToCartBtn.setTitle("Added!", for: .normal)
+            //btn font color = white
+            isAddedToCartBtn.setTitleColor(UIColor.white, for: .normal)
+            //btn font size = 12
+            isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
             
             //Update button's selected status to true
             isAddedToCartBtn.isSelected = true
@@ -72,11 +120,7 @@ class StoreTableViewCell: UITableViewCell {
             //StoreCellDelegate will inform StoreVC which cell's button is selected so it can
             delegate?.didIsAddedBtnPressed(button: isAddedToCartBtn, shoe: shoe)
             
-        } else { // if liked / true
-            
-            // Update the the button's image to an unfilled heart
-            isAddedToCartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
         }
     }
-
 }

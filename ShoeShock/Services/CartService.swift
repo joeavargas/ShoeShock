@@ -29,6 +29,7 @@ class CartService {
         if let index = products.firstIndex(of: removedShoe){
             products.remove(at: index)
         }
+        print("\(cartedShoe.name) has been removed from the cart")
     }
     
     // Cycles through products[SelectedProducts] and returns the total price of all products
