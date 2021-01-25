@@ -26,6 +26,8 @@ class CartService {
     //Removes shoe from cart when quantity reaches 0
     func removeShoeFromCart(cartedShoe: Shoe){
         let removedShoe = SelectedProduct(shoe: cartedShoe, quantity: 0, totalCost: cartedShoe.price)
+        removedShoe.shoe.addedToCart = false
+        print("\(removedShoe.shoe.name) is now \(removedShoe.shoe.addedToCart)")
         if let index = products.firstIndex(of: removedShoe){
             products.remove(at: index)
         }

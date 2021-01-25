@@ -43,7 +43,7 @@ class StoreViewController: UIViewController, StoreCellDelegate {
              let shoeInfoVC = navController.topViewController as! ShoeInfoViewController
              
             shoeInfoVC.shoe = shoe
-         }
+         } //TODO: assign a segue to CartVC, pass shoe data over. See if an 'unwind' segue can be added to pass back shoe info back
      }
     
     // MARK: - StoreCell Delegate
