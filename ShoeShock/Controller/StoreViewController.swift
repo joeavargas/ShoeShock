@@ -28,6 +28,7 @@ class StoreViewController: UIViewController, StoreCellDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.reloadData()
 
         // Do any additional setup after loading the view.
     }

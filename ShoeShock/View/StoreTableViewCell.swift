@@ -35,17 +35,6 @@ class StoreTableViewCell: UITableViewCell {
         shoeNameLbl.text = shoe.name
         shoePriceLbl.text = String(format: "$%.2f", shoe.price)
         
-        updateAddedToCartBtnStatus(shoe: shoe)
-    }
-    
-    @IBAction func addToCartBtnTapped(_ sender: Any) {
-        updateAddedToCartBtnPressedStatus()
-    }
-    
-    //MARK: - Functions
-    
-    func updateAddedToCartBtnStatus(shoe: Shoe){
-        
         switch shoe.addedToCart {
         case true:
             //MARK: If the shoe is in the cart, configure the button like so:
@@ -73,6 +62,12 @@ class StoreTableViewCell: UITableViewCell {
             isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
         }
     }
+    
+    @IBAction func addToCartBtnTapped(_ sender: Any) {
+        updateAddedToCartBtnPressedStatus()
+    }
+    
+    //MARK: - Functions
     
     func updateAddedToCartBtnPressedStatus(){
         
