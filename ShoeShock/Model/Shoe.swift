@@ -26,8 +26,8 @@ struct Shoe {
     }
 }
 
-class SelectedProduct: Equatable {
-    static func == (lhs: SelectedProduct, rhs: SelectedProduct) -> Bool {
+class ShoesInCart: Equatable {
+    static func == (lhs: ShoesInCart, rhs: ShoesInCart) -> Bool {
         return lhs.shoe.name == rhs.shoe.name
     }
     

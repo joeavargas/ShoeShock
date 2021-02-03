@@ -17,7 +17,7 @@ class CartViewController: UIViewController, StepperValueChanged, RemoveCellAndSh
     
     
     //MARK: Properties
-    var selectedProduct = [SelectedProduct]()
+    var selectedProduct = [ShoesInCart]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,14 +53,14 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return CartService.shared.products.count
+        return CartService.shared.shoesInCart.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Dequeue cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCell", for: indexPath) as? CartTableViewCell
         //Fetch object to display
-        let selectedShoe = CartService.shared.products[indexPath.row]
+        let selectedShoe = CartService.shared.shoesInCart[indexPath.row]
                 
         //Update cell / pass data over
         cell?.updateCell(sp: selectedShoe)
