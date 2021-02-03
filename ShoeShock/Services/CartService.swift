@@ -10,26 +10,26 @@ import Foundation
 class CartService {
     
     static let shared = CartService()
-    var products = [SelectedProduct]()
+    var shoesInCart = [ShoesInCart]()
     
-    func getCartedShoes() -> [SelectedProduct] {
-        return products
+    func getCartedShoes() -> [ShoesInCart] {
+        return shoesInCart
     }
     
     // Adds shoe to products:[SelectedProducts]
     func addShoe(shoe: Shoe) {
-        let selectedProduct = SelectedProduct(shoe: shoe, quantity: 1, totalCost: shoe.price)
-        products.append(selectedProduct)
-        print("\(shoe.name) added to cart. There are \(products.count) in the Selected Products")
+        let selectedProduct = ShoesInCart(shoe: shoe, quantity: 1, totalCost: shoe.price)
+        shoesInCart.append(selectedProduct)
+        print("\(shoe.name) added to cart. There are \(shoesInCart.count) in the Selected Products")
     }
     
     //Removes shoe from cart when quantity reaches 0
     func removeShoeFromCart(cartedShoe: Shoe){
-        let removedShoe = SelectedProduct(shoe: cartedShoe, quantity: 0, totalCost: cartedShoe.price)
+        let removedShoe = ShoesInCart(shoe: cartedShoe, quantity: 0, totalCost: cartedShoe.price)
         removedShoe.shoe.addedToCart = false
         print("\(removedShoe.shoe.name) is now \(removedShoe.shoe.addedToCart)")
-        if let index = products.firstIndex(of: removedShoe){
-            products.remove(at: index)
+        if let index = shoesInCart.firstIndex(of: removedShoe){
+            shoesInCart.remove(at: index)
         }
         print("\(cartedShoe.name) has been removed from the cart")
     }
@@ -37,8 +37,8 @@ class CartService {
     // Cycles through products[SelectedProducts] and returns the total price of all products
     func getSubtotal() -> Double {
         var total = 0.0
-        for x in 0..<products.count {
-            total += products[x].totalCost
+        for x in 0..<shoesInCart.count {
+            total += shoesInCart[x].totalCost
         }
         return total
     }

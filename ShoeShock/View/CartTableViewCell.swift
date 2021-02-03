@@ -26,7 +26,7 @@ class CartTableViewCell: UITableViewCell {
     
     
     //Properties
-    var selectedProduct: SelectedProduct!
+    var selectedProduct: ShoesInCart!
     var delegate: StepperValueChanged!
     var removeCellAndShoeFromCartDelegate: RemoveCellAndShoeFromCart!
 
@@ -35,7 +35,7 @@ class CartTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func updateCell(sp: SelectedProduct){
+    func updateCell(sp: ShoesInCart){
         shoeImageView.image = imageFrom(imageName: sp.shoe.image)
         shoeNameLbl.text = sp.shoe.name
         shoePriceLbl.text = String(format: "$%.2f", sp.totalCost)
