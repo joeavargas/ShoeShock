@@ -39,7 +39,12 @@ class StoreViewController: UIViewController, StoreCellDelegate {
     // MARK: - StoreCell Delegate
     func didIsAddedBtnPressed(button: UIButton, shoe: Shoe) {
         if button.isSelected{
-            CartService.shared.addShoe(shoe: shoe)
+            //CartService.shared.addShoe(shoe: shoe)
+            if shoe.addedToCart {
+                CartService.shared.addShoe(shoe: shoe)
+            } else {
+                CartService.shared.removeShoeFromCart(cartedShoe: shoe)
+            }
         }
     }
 }
