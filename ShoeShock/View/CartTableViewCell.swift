@@ -11,7 +11,7 @@ protocol StepperValueChanged {
     func updateSubtotal(stepper: UIStepper)
 }
 
-protocol RemoveCellAndShoeFromCart{
+protocol RemoveShoeFromCartDelegate{
     func removeShoeAt(stepper: UIStepper, shoe: Shoe)
 }
 
@@ -26,16 +26,16 @@ class CartTableViewCell: UITableViewCell {
     
     
     //Properties
-    var selectedProduct: ShoesInCart!
-    var delegate: StepperValueChanged!
-    var removeCellAndShoeFromCartDelegate: RemoveCellAndShoeFromCart!
+    var selectedProduct: Cart!
+    var stepperValueChangedDelegate: StepperValueChanged!
+    var removeShoeFromCartDelegate: RemoveShoeFromCartDelegate!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func updateCell(sp: ShoesInCart){
+    func updateCell(sp: Cart){
         shoeImageView.image = imageFrom(imageName: sp.shoe.image)
         shoeNameLbl.text = sp.shoe.name
         shoePriceLbl.text = String(format: "$%.2f", sp.totalCost)
@@ -59,12 +59,12 @@ class CartTableViewCell: UITableViewCell {
         
         //When the shoe quantity = 0, ID the shoe and let CartVC know.
         if quantityStepper.value == 0 {
-            removeCellAndShoeFromCartDelegate.removeShoeAt(stepper: quantityStepper, shoe: selectedProduct.shoe)
-            print("CartService has been asked to remove \(selectedProduct.shoe.name) from the cart")
+            removeShoeFromCartDelegate.removeShoeAt(stepper: quantityStepper, shoe: selectedProduct.shoe)
+            print("CartService asked to remove \(selectedProduct.shoe.name) from the cart")
         }
         
         //Delegate when the stepper is tapped(changing the quantity of shoes and recalculating) and update the total cost in CartVC
-        delegate?.updateSubtotal(stepper: quantityStepper)
+        stepperValueChangedDelegate?.updateSubtotal(stepper: quantityStepper)
 
     }
 }

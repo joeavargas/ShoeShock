@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoreViewController: UIViewController, StoreCellDelegate {
+class StoreViewController: UIViewController, AddToCartButtonPressedDelegate {
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -33,15 +33,16 @@ class StoreViewController: UIViewController, StoreCellDelegate {
              let shoeInfoVC = navController.topViewController as! ShoeInfoViewController
              
             shoeInfoVC.shoe = shoe
-         } //TODO: assign a segue to CartVC, pass shoe data over. See if an 'unwind' segue can be added to pass back shoe info back
+         }
      }
     
     // MARK: - StoreCell Delegate
-    func didIsAddedBtnPressed(button: UIButton, shoe: Shoe) {
+    func addToCartButtonPressed(button: UIButton, shoe: Shoe) {
         if button.isSelected{
-            //CartService.shared.addShoe(shoe: shoe)
+            // if addToCart = true, add shoe to cart
             if shoe.addedToCart {
                 CartService.shared.addShoe(shoe: shoe)
+            // else, remove from cart
             } else {
                 CartService.shared.removeShoeFromCart(cartedShoe: shoe)
             }
@@ -66,7 +67,7 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
         let shoe = shoes[indexPath.row]
         
         //Configure cell
-        cell?.delegate = self
+        cell?.addToCartButtonPressedDelegate = self
         cell?.updateCell(shoe: shoe)
         cell?.shoe = shoe
         

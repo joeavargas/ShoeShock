@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Shoe {
+class Shoe {
     
     var image: String
     var name: String
@@ -35,8 +35,8 @@ struct Shoe {
     ]
 }
 
-class ShoesInCart: Equatable {
-    static func == (lhs: ShoesInCart, rhs: ShoesInCart) -> Bool {
+class Cart: Equatable {
+    static func == (lhs: Cart, rhs: Cart) -> Bool {
         return lhs.shoe.name == rhs.shoe.name
     }
     
