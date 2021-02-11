@@ -24,6 +24,10 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == "toShoeInfoVC" {

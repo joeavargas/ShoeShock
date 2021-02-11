@@ -87,16 +87,16 @@ class StoreTableViewCell: UITableViewCell {
         //MARK: - When a shoe is in the cart, remove it from cart
         case true:
             shoe.addedToCart = false
-
-            //Remove shoe from the cart
-            CartService.shared.removeShoeFromCart(cartedShoe: shoe)
             
             //Update button's selected status to true
             isAddedToCartBtn.isSelected = true
             
             //Update the button UI state
             updateCell(shoe: shoe)
-            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
+            
+            //AddToCartButtonPressedDelegate will inform StoreVC which cell's button is selected so it can add to cart
+            addToCartButtonPressedDelegate?.addToCartButtonPressed(button: isAddedToCartBtn, shoe: shoe)
+//            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
             
         //MARK: - When a shoe is NOT in the cart, add it to the cart
         case false:
@@ -108,10 +108,10 @@ class StoreTableViewCell: UITableViewCell {
             //Update the button UI state
             updateCell(shoe: shoe)
             
-            //StoreCellDelegate will inform StoreVC which cell's button is selected so it can
+            //AddToCartButtonPressedDelegate will inform StoreVC which cell's button is selected so it can add to cart
             addToCartButtonPressedDelegate?.addToCartButtonPressed(button: isAddedToCartBtn, shoe: shoe)
             
-            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
+//            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
         }
     }
 }

@@ -60,7 +60,6 @@ class CartTableViewCell: UITableViewCell {
         //When the shoe quantity = 0, ID the shoe and let CartVC know.
         if quantityStepper.value == 0 {
             removeShoeFromCartDelegate.removeShoeAt(stepper: quantityStepper, shoe: selectedProduct.shoe)
-            print("CartService asked to remove \(selectedProduct.shoe.name) from the cart")
         }
         
         //Delegate when the stepper is tapped(changing the quantity of shoes and recalculating) and update the total cost in CartVC
