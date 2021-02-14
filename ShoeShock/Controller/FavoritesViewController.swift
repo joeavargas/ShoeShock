@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class FavoritesViewController: UIViewController, RemoveShoeFromFavoritesDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +23,12 @@ class FavoritesViewController: UIViewController {
     }
     
     //MARK: Functions
-    
+    func removeShoeFromFavorites(button: UIButton, shoe: Shoe) {
+        if button.tag == 2 {
+            FavoriteService.shared.removeShoeFromFavorites(shoe: shoe)
+            tableView.reloadData()
+        }
+    }
 
 }
 //MARK: - TableView Datasource and Delegate
@@ -42,6 +47,8 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         
         let favoritedShoe = FavoriteService.shared.favorites[indexPath.row]
         cell?.updateCell(favoritedShoe: favoritedShoe)
+        cell?.favoritedShoes = favoritedShoe
+        cell?.removeShoeFromFavoritesDelegate = self
         
         return cell!
     }
