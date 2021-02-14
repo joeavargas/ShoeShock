@@ -72,6 +72,13 @@ class StoreTableViewCell: UITableViewCell {
             //btn font size = 12
             isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
         }
+        
+        switch shoe.addedToFavorites {
+        case true:
+            isAddedToFavoritesBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        case false:
+            isAddedToFavoritesBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
     @IBAction func addToCartBtnTapped(_ sender: Any) {
