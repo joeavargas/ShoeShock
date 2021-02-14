@@ -7,7 +7,8 @@
 
 import UIKit
 
-class StoreViewController: UIViewController, AddToCartButtonPressedDelegate {
+class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, AddToFavoritesButtonPressedDelegate {
+    
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -42,13 +43,23 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate {
     
     // MARK: - StoreCell Delegate
     func addToCartButtonPressed(button: UIButton, shoe: Shoe) {
-        if button.isSelected{
+        if button.tag == 0 {
             // if addToCart = true, add shoe to cart
             if shoe.addedToCart {
                 CartService.shared.addShoe(shoe: shoe)
             // else, remove from cart
             } else {
                 CartService.shared.removeShoeFromCart(cartedShoe: shoe)
+            }
+        }
+    }
+    
+    func addToFavoritesButtonPressed(button: UIButton, shoe: Shoe) {
+        if button.tag == 1 {
+            if shoe.addedToFavorites{
+                print("Shoe added to favorites")
+            } else {
+                print("Shoe removed from favorites")
             }
         }
     }
@@ -72,6 +83,7 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
         
         //Configure cell
         cell?.addToCartButtonPressedDelegate = self
+        cell?.addToFavoritesButtonPressedDelegate = self
         cell?.updateCell(shoe: shoe)
         cell?.shoe = shoe
         

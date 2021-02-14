@@ -66,21 +66,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28p-Ld-3V1">
-                                                    <rect key="frame" x="261" y="25" width="50" height="50"/>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28p-Ld-3V1">
+                                                    <rect key="frame" x="172" y="37.666666666666664" width="25" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="Ani-BC-cJs"/>
-                                                        <constraint firstAttribute="height" constant="50" id="Qut-xC-Ec6"/>
+                                                        <constraint firstAttribute="width" constant="25" id="Ani-BC-cJs"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Qut-xC-Ec6"/>
                                                     </constraints>
                                                     <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
                                                         <action selector="addToCartBtnTapped:" destination="SPa-dR-SQB" eventType="touchUpInside" id="V6z-Mc-CUg"/>
+                                                        <action selector="addToFavoritesBtnTapped:" destination="SPa-dR-SQB" eventType="touchUpInside" id="DJP-rt-WEb"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="e6r-se-iBI" firstAttribute="trailing" secondItem="cn6-OE-I60" secondAttribute="trailingMargin" id="0og-Vr-NcK"/>
-                                                <constraint firstItem="e6r-se-iBI" firstAttribute="leading" secondItem="28p-Ld-3V1" secondAttribute="trailing" constant="8" symbolic="YES" id="3BY-wG-w6m"/>
+                                                <constraint firstItem="28p-Ld-3V1" firstAttribute="leading" secondItem="oU5-RL-sbA" secondAttribute="trailing" constant="20" id="BMw-UG-54b"/>
                                                 <constraint firstItem="oU5-RL-sbA" firstAttribute="leading" secondItem="J35-e6-fwo" secondAttribute="trailing" constant="8" symbolic="YES" id="FJ6-If-CoK"/>
                                                 <constraint firstItem="J35-e6-fwo" firstAttribute="top" secondItem="cn6-OE-I60" secondAttribute="topMargin" constant="4" id="GZY-90-WWb"/>
                                                 <constraint firstItem="J35-e6-fwo" firstAttribute="leading" secondItem="cn6-OE-I60" secondAttribute="leadingMargin" id="Kab-Gj-wuD"/>
