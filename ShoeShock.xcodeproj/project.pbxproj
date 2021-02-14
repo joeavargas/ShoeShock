@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E326709125D983AD0078BCD9 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E326709025D983AD0078BCD9 /* FavoritesViewController.swift */; };
+		E326709D25D9A88C0078BCD9 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E326709C25D9A88C0078BCD9 /* FavoriteService.swift */; };
 		E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768525AF284600B1FFFA /* AppDelegate.swift */; };
 		E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768725AF284600B1FFFA /* SceneDelegate.swift */; };
 		E384768D25AF284600B1FFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384768B25AF284600B1FFFA /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		E326709025D983AD0078BCD9 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E326709C25D9A88C0078BCD9 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
 		E384768225AF284600B1FFFA /* ShoeShock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeShock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E384768525AF284600B1FFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E384768725AF284600B1FFFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D4676725AFD8E8001F1649 /* CartService.swift */,
+				E326709C25D9A88C0078BCD9 /* FavoriteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */,
+				E326709D25D9A88C0078BCD9 /* FavoriteService.swift in Sources */,
 				E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */,
 				E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */,
 				E3D4676825AFD8E8001F1649 /* CartService.swift in Sources */,

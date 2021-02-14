@@ -54,3 +54,16 @@ class Cart: Equatable {
         totalCost = shoe.price * Double(quantity)
     }
 }
+
+class Favorited: Equatable {
+    var shoe: Shoe
+    
+    init(shoe: Shoe) {
+        self.shoe = shoe
+    }
+    
+    static func == (lhs: Favorited, rhs: Favorited) -> Bool {
+        return lhs.shoe.name == rhs.shoe.name
+    }
+    
+}
