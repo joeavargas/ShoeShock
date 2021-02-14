@@ -57,8 +57,10 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, Add
     func addToFavoritesButtonPressed(button: UIButton, shoe: Shoe) {
         if button.tag == 1 {
             if shoe.addedToFavorites{
+                FavoriteService.shared.addShoeToFavorites(shoe: shoe)
                 print("Shoe added to favorites")
             } else {
+                FavoriteService.shared.removeShoeFromFavorites(shoe: shoe)
                 print("Shoe removed from favorites")
             }
         }
