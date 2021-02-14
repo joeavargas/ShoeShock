@@ -438,7 +438,7 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="100" id="pFf-XF-cPb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteCell" rowHeight="100" id="pFf-XF-cPb" customClass="FavoritesTableViewCell" customModule="ShoeShock" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pFf-XF-cPb" id="0as-Ej-iCf">
@@ -473,6 +473,9 @@
                                                     <state key="normal" title="Remove">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="removeBtnTapped:" destination="pFf-XF-cPb" eventType="touchUpInside" id="abU-Ep-xIu"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -487,6 +490,12 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="hty-ow-Npx" secondAttribute="bottom" constant="4" id="pQj-ey-PGa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="removeBtn" destination="8ZS-jW-FBW" id="M1V-gA-TCp"/>
+                                            <outlet property="shoeImageView" destination="hty-ow-Npx" id="Oy1-14-For"/>
+                                            <outlet property="shoeNameLbl" destination="ccO-q3-wC7" id="P39-c1-sw8"/>
+                                            <outlet property="shoePriceLbl" destination="xhZ-Ku-OYG" id="zGI-9U-ldL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
