@@ -416,10 +416,10 @@
             </objects>
             <point key="canvasLocation" x="2332" y="-242"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="Rpc-V6-fVl">
             <objects>
-                <viewController id="OtG-XH-q1M" sceneMemberID="viewController">
+                <viewController id="OtG-XH-q1M" customClass="FavoritesViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXI-un-uq3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,9 +464,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZS-jW-FBW">
-                                                    <rect key="frame" x="344" y="35" width="55" height="30"/>
+                                                    <rect key="frame" x="304" y="35" width="75" height="30"/>
+                                                    <color key="backgroundColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="k8w-zX-uoX"/>
+                                                    </constraints>
                                                     <state key="normal" title="Remove">
-                                                        <color key="titleColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -476,7 +480,7 @@
                                                 <constraint firstItem="8ZS-jW-FBW" firstAttribute="centerY" secondItem="xhZ-Ku-OYG" secondAttribute="centerY" id="Uew-dG-4a1"/>
                                                 <constraint firstItem="ccO-q3-wC7" firstAttribute="leading" secondItem="hty-ow-Npx" secondAttribute="trailing" constant="8" symbolic="YES" id="XeO-yg-N1H"/>
                                                 <constraint firstItem="xhZ-Ku-OYG" firstAttribute="leading" secondItem="hty-ow-Npx" secondAttribute="trailing" constant="8" symbolic="YES" id="azZ-IC-ulz"/>
-                                                <constraint firstAttribute="trailing" secondItem="8ZS-jW-FBW" secondAttribute="trailing" constant="15" id="bGx-ib-wEw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8ZS-jW-FBW" secondAttribute="trailing" constant="15" id="ge0-IA-mIL"/>
                                                 <constraint firstItem="ccO-q3-wC7" firstAttribute="top" secondItem="0as-Ej-iCf" secondAttribute="topMargin" constant="4" id="hmi-bV-tez"/>
                                                 <constraint firstItem="hty-ow-Npx" firstAttribute="leading" secondItem="0as-Ej-iCf" secondAttribute="leadingMargin" id="ob4-iQ-hLE"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="hty-ow-Npx" secondAttribute="bottom" constant="4" id="pQj-ey-PGa"/>
@@ -498,11 +502,10 @@
                             <constraint firstItem="vcQ-v3-xeI" firstAttribute="bottom" secondItem="PZh-Bx-pS8" secondAttribute="bottom" id="axt-aj-pvy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SLh-gd-jfI">
-                        <barButtonItem key="rightBarButtonItem" image="cart" catalog="system" id="Xn1-x3-MWe">
-                            <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="SLh-gd-jfI"/>
+                    <connections>
+                        <outlet property="tableView" destination="vcQ-v3-xeI" id="Wdd-Mx-zpI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdb-XQ-AWJ" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E326709125D983AD0078BCD9 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E326709025D983AD0078BCD9 /* FavoritesViewController.swift */; };
 		E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768525AF284600B1FFFA /* AppDelegate.swift */; };
 		E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768725AF284600B1FFFA /* SceneDelegate.swift */; };
 		E384768D25AF284600B1FFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384768B25AF284600B1FFFA /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E326709025D983AD0078BCD9 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		E384768225AF284600B1FFFA /* ShoeShock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeShock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E384768525AF284600B1FFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E384768725AF284600B1FFFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E3D4675025AF3D29001F1649 /* StoreViewController.swift */,
 				E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */,
 				E3D4675925AF6622001F1649 /* CartViewController.swift */,
+				E326709025D983AD0078BCD9 /* FavoritesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				E3D4676825AFD8E8001F1649 /* CartService.swift in Sources */,
 				E3D4675D25AF66A8001F1649 /* CartTableViewCell.swift in Sources */,
 				E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */,
+				E326709125D983AD0078BCD9 /* FavoritesViewController.swift in Sources */,
 				E3D4675A25AF6622001F1649 /* CartViewController.swift in Sources */,
 				E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */,
 				E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */,
