@@ -41,6 +41,19 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, Add
          }
      }
     
+    @IBAction func unwindToStoreViewController(segue: UIStoryboardSegue){
+        guard segue.identifier == "dismissUnwind" else {return}
+        
+        let sourceViewController = segue.source as! ShoeInfoViewController
+        
+        if let shoe = sourceViewController.shoe{
+            if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                shoes[selectedIndexPath.row] = shoe
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+        }
+    }
+    
     // MARK: - StoreCell Delegate
     func addToCartButtonPressed(button: UIButton, shoe: Shoe) {
         if button.tag == 0 {

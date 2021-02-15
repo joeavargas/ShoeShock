@@ -189,6 +189,9 @@
                                 <state key="normal" title="Add to Cart">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToCartBtnTapped:" destination="fAM-Ba-fHa" eventType="touchUpInside" id="bSu-ZS-55E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-IY-Lcd">
                                 <rect key="frame" x="147" y="634.33333333333337" width="120" height="35"/>
@@ -203,6 +206,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dismissBtnTapped:" destination="fAM-Ba-fHa" eventType="touchUpInside" id="Cif-GV-RR1"/>
+                                    <segue destination="tr5-op-Weu" kind="unwind" identifier="dismissUnwind" unwindAction="unwindToStoreViewControllerWithSegue:" id="jwB-Ah-y5I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,6 +237,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egL-ds-2M7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tr5-op-Weu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2781" y="-947"/>
         </scene>
