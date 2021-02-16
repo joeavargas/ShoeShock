@@ -11,6 +11,10 @@ protocol AddToCartButtonPressedDelegate {
     func addToCartButtonPressed(button: UIButton, shoe: Shoe)
 }
 
+protocol AddToFavoritesButtonPressedDelegate {
+    func addToFavoritesButtonPressed(button: UIButton, shoe: Shoe)
+}
+
 class StoreTableViewCell: UITableViewCell {
     
     //MARK: Outlets
@@ -21,6 +25,7 @@ class StoreTableViewCell: UITableViewCell {
     @IBOutlet weak var isAddedToFavoritesBtn: UIButton!
     
     var addToCartButtonPressedDelegate: AddToCartButtonPressedDelegate?
+    var addToFavoritesButtonPressedDelegate: AddToFavoritesButtonPressedDelegate?
     var shoe: Shoe!
 
     override func awakeFromNib() {
@@ -72,15 +77,32 @@ class StoreTableViewCell: UITableViewCell {
             //btn font size = 12
             isAddedToCartBtn.titleLabel?.font = UIFont(name: "Avenir Next", size: 12)
         }
+        
+        switch shoe.addedToFavorites {
+        case true:
+            isAddedToFavoritesBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        case false:
+            isAddedToFavoritesBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
     
-    @IBAction func addToCartBtnTapped(_ sender: Any) {
-        updateAddedToCartBtnPressedStatus()
+    @IBAction func addToCartBtnTapped(_ sender: UIButton) {
+        if sender.tag == 0 {
+            updateAddedToCartBtnTappedStatus()
+        }
+        
     }
+    
+    @IBAction func addToFavoritesBtnTapped(_ sender: UIButton) {
+        if sender.tag == 1 {
+            updateAddToFavoritesBtnTappedStatus()
+        }
+    }
+    
     
     //MARK: - Functions
     
-    func updateAddedToCartBtnPressedStatus(){
+    func updateAddedToCartBtnTappedStatus(){
         
         switch shoe.addedToCart {
         
@@ -112,6 +134,32 @@ class StoreTableViewCell: UITableViewCell {
             addToCartButtonPressedDelegate?.addToCartButtonPressed(button: isAddedToCartBtn, shoe: shoe)
             
 //            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
+        }
+    }
+    
+    func updateAddToFavoritesBtnTappedStatus(){
+        switch shoe.addedToFavorites {
+        case true:
+            shoe.addedToFavorites = false
+            
+            isAddedToFavoritesBtn.isSelected = true
+            
+            updateCell(shoe: shoe)
+            
+            //FavoritesButtonPressedDelegate will inform StoreVC which cell's button is selected so it can add to favorites
+            addToFavoritesButtonPressedDelegate?.addToFavoritesButtonPressed(button: isAddedToFavoritesBtn, shoe: shoe)
+            print("\(shoe.name) is now \(shoe.addedToFavorites)")
+        case false:
+            shoe.addedToFavorites = true
+            
+            isAddedToFavoritesBtn.isSelected = true
+            
+            updateCell(shoe: shoe)
+            
+            //FavoritesButtonPressedDelegate will inform StoreVC which cell's button is selected so it can delete from favorites
+            addToFavoritesButtonPressedDelegate?.addToFavoritesButtonPressed(button: isAddedToFavoritesBtn, shoe: shoe)
+            
+            print("\(shoe.name) is now \(shoe.addedToFavorites)")
         }
     }
 }

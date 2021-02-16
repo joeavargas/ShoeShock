@@ -7,7 +7,8 @@
 
 import UIKit
 
-class StoreViewController: UIViewController, AddToCartButtonPressedDelegate {
+class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, AddToFavoritesButtonPressedDelegate {
+    
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -40,15 +41,40 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate {
          }
      }
     
+    @IBAction func unwindToStoreViewController(segue: UIStoryboardSegue){
+        guard segue.identifier == "dismissUnwind" else {return}
+        
+        let sourceViewController = segue.source as! ShoeInfoViewController
+        
+        if let shoe = sourceViewController.shoe{
+            if let selectedIndexPath = tableView.indexPathForSelectedRow{
+                shoes[selectedIndexPath.row] = shoe
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+        }
+    }
+    
     // MARK: - StoreCell Delegate
     func addToCartButtonPressed(button: UIButton, shoe: Shoe) {
-        if button.isSelected{
+        if button.tag == 0 {
             // if addToCart = true, add shoe to cart
             if shoe.addedToCart {
                 CartService.shared.addShoe(shoe: shoe)
             // else, remove from cart
             } else {
                 CartService.shared.removeShoeFromCart(cartedShoe: shoe)
+            }
+        }
+    }
+    
+    func addToFavoritesButtonPressed(button: UIButton, shoe: Shoe) {
+        if button.tag == 1 {
+            if shoe.addedToFavorites{
+                FavoriteService.shared.addShoeToFavorites(shoe: shoe)
+                print("Shoe added to favorites")
+            } else {
+                FavoriteService.shared.removeShoeFromFavorites(shoe: shoe)
+                print("Shoe removed from favorites")
             }
         }
     }
@@ -72,6 +98,7 @@ extension StoreViewController: UITableViewDelegate, UITableViewDataSource {
         
         //Configure cell
         cell?.addToCartButtonPressedDelegate = self
+        cell?.addToFavoritesButtonPressedDelegate = self
         cell?.updateCell(shoe: shoe)
         cell?.shoe = shoe
         

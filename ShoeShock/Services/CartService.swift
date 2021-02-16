@@ -19,6 +19,7 @@ class CartService {
     // Adds shoe to products:[SelectedProducts]
     func addShoe(shoe: Shoe) {
         let selectedProduct = Cart(shoe: shoe, quantity: 1, totalCost: shoe.price)
+        shoe.addedToCart = true
         cart.append(selectedProduct)
         print("\(shoe.name) added to cart. There are \(cart.count) pair(s) of shoes in the cart")
     }
