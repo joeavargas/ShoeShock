@@ -67,22 +67,7 @@ class ShoeInfoViewController: UIViewController {
         }
     }
     
-    //MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        guard segue.identifier == "dismissUnwind" else {return}
-        
-        let shoeImage = shoe.image
-        let shoeName = shoe.name
-        let shoePrice = shoe.price
-        let shoeInfo = shoe.description
-        let shoeCartStatus = shoe.addedToCart
-        let shoeFavoritesStatus = shoe.addedToFavorites
-        
-//        shoe = Shoe(image: shoeImage, name: shoeName, price: shoePrice, description: shoeInfo, addedToCart: shoeCartStatus, addedToFavorites: shoeFavoritesStatus)
-    }
-    
+    //MARK: Navigation   
     @IBAction func dismissBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
