@@ -24,6 +24,7 @@ class CartViewController: UIViewController, StepperValueChanged, RemoveShoeFromC
         tableView.delegate = self
         tableView.dataSource = self
         totalLbl.text = String(format: "$%.2f", CartService.shared.getSubtotal())
+        tableView.reloadData()
 
         // Do any additional setup after loading the view.
     }

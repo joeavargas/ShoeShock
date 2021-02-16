@@ -99,7 +99,7 @@
                                             <outlet property="shoeImageView" destination="J35-e6-fwo" id="bd9-Rm-3Ad"/>
                                             <outlet property="shoeNameLbl" destination="9Re-EZ-cOm" id="wbb-qv-oPx"/>
                                             <outlet property="shoePriceLbl" destination="oU5-RL-sbA" id="pB1-ce-ZTA"/>
-                                            <segue destination="2KD-Ua-mzq" kind="presentation" identifier="toShoeInfoVC" id="Ugm-n6-dYM"/>
+                                            <segue destination="ctW-Ed-qRt" kind="show" identifier="toShoeInfoVC" id="itz-wJ-ReS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,30 +144,30 @@
             <objects>
                 <viewController id="fAM-Ba-fHa" customClass="ShoeInfoViewController" customModule="ShoeShock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="onj-8y-QAp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi-Vis Pro Leather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oos-w1-iz9">
-                                <rect key="frame" x="126" y="66" width="162" height="28"/>
+                                <rect key="frame" x="126" y="54" width="162" height="28"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPE-eO-E54">
-                                <rect key="frame" x="107" y="102" width="200" height="200"/>
+                                <rect key="frame" x="107" y="90" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="8J6-BM-tvQ"/>
                                     <constraint firstAttribute="height" constant="200" id="rGa-lD-j46"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$75.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4c-PF-muL">
-                                <rect key="frame" x="174.66666666666666" y="312" width="65" height="27.333333333333314"/>
+                                <rect key="frame" x="174.66666666666666" y="300" width="65" height="27.333333333333314"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ay9-lH-Ta3">
-                                <rect key="frame" x="57" y="344.33333333333331" width="300" height="239.99999999999994"/>
+                                <rect key="frame" x="57" y="332.33333333333331" width="300" height="239.99999999999994"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="HNh-lV-EMj"/>
@@ -179,7 +179,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-uY-PaK">
-                                <rect key="frame" x="147" y="589.33333333333337" width="120" height="35"/>
+                                <rect key="frame" x="147" y="577.33333333333337" width="120" height="35"/>
                                 <color key="backgroundColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="d9y-f6-Bz2"/>
@@ -194,7 +194,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-IY-Lcd">
-                                <rect key="frame" x="147" y="634.33333333333337" width="120" height="35"/>
+                                <rect key="frame" x="147" y="622.33333333333337" width="120" height="35"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="lvo-dm-UpJ"/>
@@ -239,7 +239,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egL-ds-2M7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tr5-op-Weu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2781" y="-947"/>
+            <point key="canvasLocation" x="3239.130434782609" y="-945.6521739130435"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="De6-TC-uiA">
@@ -265,24 +265,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xou-BP-VQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.58695652173915"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4AF-Hw-p5Q">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2KD-Ua-mzq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KNB-ig-0RG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fAM-Ba-fHa" kind="relationship" relationship="rootViewController" id="Nrr-jC-nCF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sLC-NG-ndC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1912" y="-947"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="cEe-U0-Fq1">
@@ -525,6 +507,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdb-XQ-AWJ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2332" y="518"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ML9-wc-aIu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ctW-Ed-qRt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Xmi-mG-KpB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wsp-bP-1Ew">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fAM-Ba-fHa" kind="relationship" relationship="rootViewController" id="3vn-E0-y2E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ip7-Zx-GRR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2331.8840579710145" y="-945.6521739130435"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.80392156859999997" green="0.12549019610000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
