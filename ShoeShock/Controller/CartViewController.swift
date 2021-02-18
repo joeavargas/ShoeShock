@@ -12,9 +12,7 @@ class CartViewController: UIViewController, StepperValueChanged, RemoveShoeFromC
     //MARK: Outlets
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var totalLbl: UILabel!
-    @IBOutlet weak var purchaseBtn: UIButton!
-    
+    @IBOutlet weak var totalLbl: UILabel!    
     
     //MARK: Properties
     var selectedProduct = [Cart]()
@@ -29,8 +27,11 @@ class CartViewController: UIViewController, StepperValueChanged, RemoveShoeFromC
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func purchaseBtnTapped(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCheckoutVC" {
+            let checkOutViewController = segue.destination as! CheckoutViewController
+            checkOutViewController.purchaseTotal = String(format: "$%.2f", CartService.shared.getSubtotal())
+        }
     }
     
     func updateSubtotal(stepper: UIStepper) {
@@ -53,7 +54,6 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return CartService.shared.cart.count
     }
     

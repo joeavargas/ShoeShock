@@ -14,6 +14,7 @@
 		E384768D25AF284600B1FFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384768B25AF284600B1FFFA /* Main.storyboard */; };
 		E384768F25AF284600B1FFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E384768E25AF284600B1FFFA /* Assets.xcassets */; };
 		E384769225AF284600B1FFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384769025AF284600B1FFFA /* LaunchScreen.storyboard */; };
+		E38EF9D725DDE4E300DEDBE7 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38EF9D625DDE4E300DEDBE7 /* CheckoutViewController.swift */; };
 		E3C3763225D9BBA40093E022 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3763125D9BBA40093E022 /* FavoritesTableViewCell.swift */; };
 		E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4673F25AF2CAF001F1649 /* Shoe.swift */; };
 		E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		E384768E25AF284600B1FFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E384769125AF284600B1FFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E384769325AF284600B1FFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38EF9D625DDE4E300DEDBE7 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		E3C3763125D9BBA40093E022 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		E3D4673F25AF2CAF001F1649 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
 		E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */,
 				E3D4675925AF6622001F1649 /* CartViewController.swift */,
 				E326709025D983AD0078BCD9 /* FavoritesViewController.swift */,
+				E38EF9D625DDE4E300DEDBE7 /* CheckoutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */,
 				E3D4676825AFD8E8001F1649 /* CartService.swift in Sources */,
 				E3D4675D25AF66A8001F1649 /* CartTableViewCell.swift in Sources */,
+				E38EF9D725DDE4E300DEDBE7 /* CheckoutViewController.swift in Sources */,
 				E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */,
 				E326709125D983AD0078BCD9 /* FavoritesViewController.swift in Sources */,
 				E3D4675A25AF6622001F1649 /* CartViewController.swift in Sources */,
