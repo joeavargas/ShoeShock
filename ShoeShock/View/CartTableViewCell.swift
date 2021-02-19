@@ -32,7 +32,7 @@ class CartTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        shoeImageView.layer.cornerRadius = 10
     }
 
     func updateCell(sp: Cart){

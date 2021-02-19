@@ -13,12 +13,24 @@ class CartViewController: UIViewController, StepperValueChanged, RemoveShoeFromC
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLbl: UILabel!    
+    @IBOutlet weak var purchaseBtn: UIButton!
     
     //MARK: Properties
     var selectedProduct = [Cart]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        purchaseBtn.layer.cornerRadius = 5
+        
+        if CartService.shared.cart.count == 0 {
+            purchaseBtn.layer.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            purchaseBtn.isEnabled = false
+        } else {
+            purchaseBtn.layer.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            purchaseBtn.isEnabled = true
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
         totalLbl.text = String(format: "$%.2f", CartService.shared.getSubtotal())
@@ -40,8 +52,17 @@ class CartViewController: UIViewController, StepperValueChanged, RemoveShoeFromC
     // - remove shoe from products array of type SelectedProducts
     // - refresh tableview
     func removeShoeAt(stepper: UIStepper, shoe: Shoe) {
-            CartService.shared.removeShoeFromCart(cartedShoe: shoe)
-            tableView.reloadData()
+        CartService.shared.removeShoeFromCart(cartedShoe: shoe)
+        
+        if CartService.shared.cart.count == 0 {
+            purchaseBtn.layer.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            purchaseBtn.isEnabled = false
+        } else {
+            purchaseBtn.layer.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+            purchaseBtn.isEnabled = true
+        }
+        
+        tableView.reloadData()
     }
 }
 

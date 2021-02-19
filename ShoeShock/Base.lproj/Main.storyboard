@@ -395,6 +395,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WFK-I8-eeL"/>
                     <connections>
+                        <outlet property="purchaseBtn" destination="csC-vJ-uhB" id="Mmf-fS-3iY"/>
                         <outlet property="tableView" destination="tPY-sH-78K" id="jXj-6A-3dM"/>
                         <outlet property="totalLbl" destination="QXa-cl-jJf" id="J3E-6R-kjn"/>
                     </connections>

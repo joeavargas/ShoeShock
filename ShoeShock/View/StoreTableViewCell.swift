@@ -30,6 +30,7 @@ class StoreTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        shoeImageView.layer.cornerRadius = 10
 
     }
 
