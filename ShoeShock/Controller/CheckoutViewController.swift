@@ -21,7 +21,9 @@ class CheckoutViewController: UIViewController {
         purchaseTotalLbl.text = purchaseTotal
     }
     
+    // Empties out cart reverts back to StoreViewController
     @IBAction func backToRootViewControllerBtnPressed(_ sender: Any) {
+        CartService.shared.restore()
     }
     
 
