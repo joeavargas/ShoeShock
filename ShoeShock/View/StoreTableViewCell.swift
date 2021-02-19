@@ -31,7 +31,6 @@ class StoreTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        // Initialization code
     }
 
     //MARK: Cell Init
@@ -118,7 +117,6 @@ class StoreTableViewCell: UITableViewCell {
             
             //AddToCartButtonPressedDelegate will inform StoreVC which cell's button is selected so it can add to cart
             addToCartButtonPressedDelegate?.addToCartButtonPressed(button: isAddedToCartBtn, shoe: shoe)
-//            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
             
         //MARK: - When a shoe is NOT in the cart, add it to the cart
         case false:
@@ -132,8 +130,6 @@ class StoreTableViewCell: UITableViewCell {
             
             //AddToCartButtonPressedDelegate will inform StoreVC which cell's button is selected so it can add to cart
             addToCartButtonPressedDelegate?.addToCartButtonPressed(button: isAddedToCartBtn, shoe: shoe)
-            
-//            print("\(shoe.name) addedToCart value is \(shoe.addedToCart)")
         }
     }
     
@@ -148,7 +144,6 @@ class StoreTableViewCell: UITableViewCell {
             
             //FavoritesButtonPressedDelegate will inform StoreVC which cell's button is selected so it can add to favorites
             addToFavoritesButtonPressedDelegate?.addToFavoritesButtonPressed(button: isAddedToFavoritesBtn, shoe: shoe)
-            print("\(shoe.name) is now \(shoe.addedToFavorites)")
         case false:
             shoe.addedToFavorites = true
             
@@ -158,8 +153,7 @@ class StoreTableViewCell: UITableViewCell {
             
             //FavoritesButtonPressedDelegate will inform StoreVC which cell's button is selected so it can delete from favorites
             addToFavoritesButtonPressedDelegate?.addToFavoritesButtonPressed(button: isAddedToFavoritesBtn, shoe: shoe)
-            
-            print("\(shoe.name) is now \(shoe.addedToFavorites)")
+
         }
     }
 }

@@ -42,8 +42,6 @@ class FavoritesTableViewCell: UITableViewCell {
     //MARK: IBActions
     @IBAction func removeBtnTapped(_ sender: Any) {
         removeShoeFromFavoritesDelegate.removeShoeFromFavorites(button: removeBtn, shoe: favoritedShoes.shoe)
-        
-        
     }
     
 }

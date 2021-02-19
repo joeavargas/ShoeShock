@@ -21,8 +21,6 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, Add
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,10 +69,8 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, Add
         if button.tag == 1 {
             if shoe.addedToFavorites{
                 FavoriteService.shared.addShoeToFavorites(shoe: shoe)
-                print("Shoe added to favorites")
             } else {
                 FavoriteService.shared.removeShoeFromFavorites(shoe: shoe)
-                print("Shoe removed from favorites")
             }
         }
     }
