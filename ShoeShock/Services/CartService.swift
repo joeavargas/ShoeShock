@@ -43,4 +43,12 @@ class CartService {
         }
         return total
     }
+    
+    // Sets addToCart property to false for all shoes in the cart then empties out the cart to revert back to original state
+    func restore(){
+        for shoe in cart{
+            shoe.shoe.addedToCart = false
+        }
+        cart.removeAll()
+    }
 }
