@@ -12,8 +12,6 @@ class FavoritesViewController: UIViewController, RemoveShoeFromFavoritesDelegate
     //MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    //MARK: Properties
-
     //MARK: App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()

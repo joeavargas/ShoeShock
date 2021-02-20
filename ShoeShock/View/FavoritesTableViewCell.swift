@@ -27,7 +27,8 @@ class FavoritesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        shoeImageView.layer.cornerRadius = 10
+        removeBtn.layer.cornerRadius = 5
     }
 
     //MARK: Cell Init
@@ -42,8 +43,6 @@ class FavoritesTableViewCell: UITableViewCell {
     //MARK: IBActions
     @IBAction func removeBtnTapped(_ sender: Any) {
         removeShoeFromFavoritesDelegate.removeShoeFromFavorites(button: removeBtn, shoe: favoritedShoes.shoe)
-        
-        
     }
     
 }

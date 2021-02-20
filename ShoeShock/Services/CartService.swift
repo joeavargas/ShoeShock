@@ -21,18 +21,16 @@ class CartService {
         let selectedProduct = Cart(shoe: shoe, quantity: 1, totalCost: shoe.price)
         shoe.addedToCart = true
         cart.append(selectedProduct)
-        print("\(shoe.name) added to cart. There are \(cart.count) pair(s) of shoes in the cart")
     }
     
-    //Removes shoe from cart when quantity reaches 0
+    // Removes shoe from cart when quantity reaches 0
     func removeShoeFromCart(cartedShoe: Shoe){
         let removedShoe = Cart(shoe: cartedShoe, quantity: 0, totalCost: cartedShoe.price)
         removedShoe.shoe.addedToCart = false
-//        print("\(removedShoe.shoe.name) is now \(removedShoe.shoe.addedToCart)")
+        
         if let index = cart.firstIndex(of: removedShoe){
             cart.remove(at: index)
         }
-        print("\(cartedShoe.name) has been removed from the cart. There are \(cart.count) pair(s) of shoes in the cart")
     }
     
     // Cycles through products[SelectedProducts] and returns the total price of all products

@@ -60,10 +60,8 @@ class ShoeInfoViewController: UIViewController {
         if shoe.addedToCart == false {
             updateButtonUIStatusTrue()
             CartService.shared.addShoe(shoe: shoe)
-            print("Shoe is now \(shoe.addedToCart)")
         } else {
             updateButtonUIStatusFalse()
-            print("Shoe is now \(shoe.addedToCart)")
         }
     }
     

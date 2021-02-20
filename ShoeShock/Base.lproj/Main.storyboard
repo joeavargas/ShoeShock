@@ -395,6 +395,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WFK-I8-eeL"/>
                     <connections>
+                        <outlet property="purchaseBtn" destination="csC-vJ-uhB" id="Mmf-fS-3iY"/>
                         <outlet property="tableView" destination="tPY-sH-78K" id="jXj-6A-3dM"/>
                         <outlet property="totalLbl" destination="QXa-cl-jJf" id="J3E-6R-kjn"/>
                     </connections>
@@ -456,7 +457,7 @@
                                 <state key="normal" title="👈🏼 Back to Store"/>
                                 <connections>
                                     <action selector="backToRootViewControllerBtnPressed:" destination="qTk-Lt-cg2" eventType="touchUpInside" id="h4i-aP-DjA"/>
-                                    <segue destination="wYj-fX-QZv" kind="unwind" unwindAction="unwindToStoreViewControllerWithSegue:" id="Qkv-cc-TFa"/>
+                                    <segue destination="wYj-fX-QZv" kind="unwind" unwindAction="unwindToStoreViewControllerWithSegue:" id="4S7-JD-hlg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -477,7 +478,6 @@
                             <constraint firstItem="1gP-1k-0DP" firstAttribute="centerX" secondItem="liz-zM-iCx" secondAttribute="centerX" id="tHj-5G-bhH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ove-3C-Hg4"/>
                     <connections>
                         <outlet property="purchaseTotalLbl" destination="yf9-o5-ctg" id="njH-Uy-pWt"/>
                     </connections>
@@ -485,7 +485,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQl-fi-B2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wYj-fX-QZv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3237.68115942029" y="-242.11956521739131"/>
+            <point key="canvasLocation" x="3239" y="-242"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="Rpc-V6-fVl">

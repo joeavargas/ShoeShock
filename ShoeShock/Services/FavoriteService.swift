@@ -16,13 +16,13 @@ class FavoriteService{
         return favorites
     }
     
+    // Add shoe to favorites list
     func addShoeToFavorites(shoe: Shoe) {
         let favoritedShoe = Favorited(shoe: shoe)
         favorites.append(favoritedShoe)
-        
-        print("\(shoe.name) added to favorites. There are \(favorites.count) shoes in Favorites")
     }
     
+    // Removes shoe from favorites list
     func removeShoeFromFavorites(shoe: Shoe) {
         let removedShoe = Favorited(shoe: shoe)
         removedShoe.shoe.addedToFavorites = false
@@ -30,7 +30,5 @@ class FavoriteService{
         if let index = favorites.firstIndex(of: removedShoe){
             favorites.remove(at: index)
         }
-        
-        print("\(shoe.name) has been removed from Favorites. There are \(favorites.count) shoes in Favorites")
     }
 }
