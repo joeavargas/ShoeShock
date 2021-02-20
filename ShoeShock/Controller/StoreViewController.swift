@@ -24,6 +24,8 @@ class StoreViewController: UIViewController, AddToCartButtonPressedDelegate, Add
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         tableView.reloadData()
     }
     

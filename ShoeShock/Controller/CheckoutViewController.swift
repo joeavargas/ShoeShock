@@ -17,8 +17,12 @@ class CheckoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         purchaseTotalLbl.text = purchaseTotal
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     // Empties out cart reverts back to StoreViewController
