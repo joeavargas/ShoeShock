@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E326709125D983AD0078BCD9 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E326709025D983AD0078BCD9 /* FavoritesViewController.swift */; };
+		E326709D25D9A88C0078BCD9 /* FavoriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E326709C25D9A88C0078BCD9 /* FavoriteService.swift */; };
 		E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768525AF284600B1FFFA /* AppDelegate.swift */; };
 		E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768725AF284600B1FFFA /* SceneDelegate.swift */; };
-		E384768A25AF284600B1FFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E384768925AF284600B1FFFA /* ViewController.swift */; };
 		E384768D25AF284600B1FFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384768B25AF284600B1FFFA /* Main.storyboard */; };
 		E384768F25AF284600B1FFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E384768E25AF284600B1FFFA /* Assets.xcassets */; };
 		E384769225AF284600B1FFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E384769025AF284600B1FFFA /* LaunchScreen.storyboard */; };
+		E38EF9D725DDE4E300DEDBE7 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38EF9D625DDE4E300DEDBE7 /* CheckoutViewController.swift */; };
+		E3C3763225D9BBA40093E022 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3763125D9BBA40093E022 /* FavoritesTableViewCell.swift */; };
+		E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4673F25AF2CAF001F1649 /* Shoe.swift */; };
+		E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */; };
+		E3D4674B25AF3282001F1649 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4674A25AF3282001F1649 /* Functions.swift */; };
+		E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675025AF3D29001F1649 /* StoreViewController.swift */; };
+		E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */; };
+		E3D4675A25AF6622001F1649 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675925AF6622001F1649 /* CartViewController.swift */; };
+		E3D4675D25AF66A8001F1649 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4675C25AF66A8001F1649 /* CartTableViewCell.swift */; };
+		E3D4676825AFD8E8001F1649 /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4676725AFD8E8001F1649 /* CartService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E326709025D983AD0078BCD9 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E326709C25D9A88C0078BCD9 /* FavoriteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteService.swift; sourceTree = "<group>"; };
 		E384768225AF284600B1FFFA /* ShoeShock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoeShock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E384768525AF284600B1FFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E384768725AF284600B1FFFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E384768925AF284600B1FFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E384768C25AF284600B1FFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E384768E25AF284600B1FFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E384769125AF284600B1FFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E384769325AF284600B1FFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38EF9D625DDE4E300DEDBE7 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		E3C3763125D9BBA40093E022 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		E3D4673F25AF2CAF001F1649 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		E3D4674A25AF3282001F1649 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		E3D4675025AF3D29001F1649 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeInfoViewController.swift; sourceTree = "<group>"; };
+		E3D4675925AF6622001F1649 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E3D4675C25AF66A8001F1649 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		E3D4676725AFD8E8001F1649 /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,66 @@
 		E384768425AF284600B1FFFA /* ShoeShock */ = {
 			isa = PBXGroup;
 			children = (
+				E3D4676625AFD8DA001F1649 /* Services */,
+				E3D4674225AF2CB4001F1649 /* Model */,
+				E3D4674825AF30EC001F1649 /* View */,
+				E3D4675325AF3D2E001F1649 /* Controller */,
 				E384768525AF284600B1FFFA /* AppDelegate.swift */,
 				E384768725AF284600B1FFFA /* SceneDelegate.swift */,
-				E384768925AF284600B1FFFA /* ViewController.swift */,
 				E384768B25AF284600B1FFFA /* Main.storyboard */,
 				E384768E25AF284600B1FFFA /* Assets.xcassets */,
 				E384769025AF284600B1FFFA /* LaunchScreen.storyboard */,
 				E384769325AF284600B1FFFA /* Info.plist */,
+				E3D4674D25AF3286001F1649 /* Global */,
 			);
 			path = ShoeShock;
+			sourceTree = "<group>";
+		};
+		E3D4674225AF2CB4001F1649 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4673F25AF2CAF001F1649 /* Shoe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3D4674825AF30EC001F1649 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4674525AF30E5001F1649 /* StoreTableViewCell.swift */,
+				E3D4675C25AF66A8001F1649 /* CartTableViewCell.swift */,
+				E3C3763125D9BBA40093E022 /* FavoritesTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E3D4674D25AF3286001F1649 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4674A25AF3282001F1649 /* Functions.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		E3D4675325AF3D2E001F1649 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4675025AF3D29001F1649 /* StoreViewController.swift */,
+				E3D4675625AF46C7001F1649 /* ShoeInfoViewController.swift */,
+				E3D4675925AF6622001F1649 /* CartViewController.swift */,
+				E326709025D983AD0078BCD9 /* FavoritesViewController.swift */,
+				E38EF9D625DDE4E300DEDBE7 /* CheckoutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E3D4676625AFD8DA001F1649 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E3D4676725AFD8E8001F1649 /* CartService.swift */,
+				E326709C25D9A88C0078BCD9 /* FavoriteService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +210,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E384768A25AF284600B1FFFA /* ViewController.swift in Sources */,
+				E3D4674025AF2CAF001F1649 /* Shoe.swift in Sources */,
+				E326709D25D9A88C0078BCD9 /* FavoriteService.swift in Sources */,
 				E384768625AF284600B1FFFA /* AppDelegate.swift in Sources */,
+				E3D4675125AF3D29001F1649 /* StoreViewController.swift in Sources */,
+				E3D4676825AFD8E8001F1649 /* CartService.swift in Sources */,
+				E3D4675D25AF66A8001F1649 /* CartTableViewCell.swift in Sources */,
+				E38EF9D725DDE4E300DEDBE7 /* CheckoutViewController.swift in Sources */,
 				E384768825AF284600B1FFFA /* SceneDelegate.swift in Sources */,
+				E326709125D983AD0078BCD9 /* FavoritesViewController.swift in Sources */,
+				E3D4675A25AF6622001F1649 /* CartViewController.swift in Sources */,
+				E3C3763225D9BBA40093E022 /* FavoritesTableViewCell.swift in Sources */,
+				E3D4674625AF30E5001F1649 /* StoreTableViewCell.swift in Sources */,
+				E3D4675725AF46C7001F1649 /* ShoeInfoViewController.swift in Sources */,
+				E3D4674B25AF3282001F1649 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
